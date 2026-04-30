@@ -7,12 +7,15 @@
 
 .hero {
   position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden; /* evita cortes estranhos */
 }
 
 .hero-image {
   width: 100%;
-  height: auto;
-  z-index: 1;
+  height: 100vh;       /* ocupa toda a altura da tela */
+  object-fit: cover;   /* cobre sem distorcer */
 }
 
 .hero-text {
@@ -32,7 +35,7 @@
   font-family: 'Playfair Display', serif;
   font-size: 1.6rem;       /* maior e elegante */
   font-weight: 500;
-  color: #a67c00;          /* dourado mais escuro */
+  color: #c0c0c0;          /* prata escuro */
   line-height: 1.4;
   letter-spacing: 0.5px;
   margin-top: 10px;
