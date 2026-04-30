@@ -49,18 +49,6 @@
   animation: fadeInUp 1.5s ease;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
 .hero::after {
   content: "";
   position: absolute;
