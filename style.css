@@ -1,6 +1,4 @@
-/* ===========================
-   HERO SECTION
-   =========================== */
+/* HERO SECTION */
 .hero {
   position: relative;
   width: 100%;
@@ -17,9 +15,10 @@
 
 .hero-text {
   position: absolute;
-  z-index: 2;
+  z-index: 2; /* garante que fique acima da imagem e do gradiente */
 }
 
+/* POSICIONAMENTO ESPECÍFICO */
 .hero-text.hero-bottom-left {
   bottom: 40px;
   left: 50px;
@@ -27,17 +26,19 @@
   text-align: left;
 }
 
+/* ESTILO DO NOME */
 .hero-text.hero-bottom-left h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   font-weight: 700;
-  color: #c0c0c0;
+  color: #c0c0c0; /* prata escuro */
   text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
   opacity: 0;
   animation: fadeInUp 3s ease forwards;
   animation-delay: 0.5s;
 }
 
+/* ESTILO DO PARÁGRAFO */
 .hero-text.hero-bottom-left .intro-text {
   font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
@@ -52,42 +53,15 @@
   animation-delay: 1.5s;
 }
 
-/* ===========================
-   CARDS
-   =========================== */
-.card-title {
-  font-weight: 600;
-  color: #2c2c2c;
+/* REMOVA ou COMENTE esta regra global que causa conflito */
+ /*
+.hero-text h1 {
+  font-size: 20rem;
+  font-weight: 700;
 }
+*/
 
-.card-text {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.card-img-top {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* ===========================
-   BUTTONS
-   =========================== */
-.btn-outline-primary {
-  border-color: #b85c38;
-  color: #b85c38;
-}
-
-.btn-outline-primary:hover {
-  background-color: #b85c38;
-  color: white;
-}
-
-/* ===========================
-   EFFECTS
-   =========================== */
+/* GRADIENTE DE FUNDO */
 .hero::after {
   content: "";
   position: absolute;
@@ -96,6 +70,7 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+  z-index: 1; /* fica atrás do texto */
 }
 
 @keyframes fadeInUp {
@@ -108,5 +83,3 @@
     transform: translateY(0);
   }
 }
-
-
