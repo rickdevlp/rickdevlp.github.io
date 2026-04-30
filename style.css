@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;   /* imagem cobre toda a tela */
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -33,19 +33,19 @@
   animation-delay: 1.5s;
 }
 
-/* Nome grande embaixo ocupando toda a largura */
+/* Nome enorme ocupando toda a largura */
 .hero-text.hero-bottom-full {
   position: absolute;
   bottom: 20px;
   left: 0;
-  width: 100%;
-  text-align: center;
+  width: 100%;          /* ocupa toda a largura */
+  text-align: center;   /* centraliza horizontalmente */
   z-index: 2;
 }
 
 .hero-text.hero-bottom-full h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 6rem; /* bem grande */
+  font-size: 10vw;      /* responsivo: ocupa largura da tela */
   font-weight: 700;
   color: #c0c0c0;
   text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
@@ -76,4 +76,3 @@
     transform: translateY(0);
   }
 }
-
