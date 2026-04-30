@@ -1,81 +1,60 @@
+/* ===========================
+   HERO SECTION
+   =========================== */
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;        /* ocupa toda a altura da tela */
+  height: 100vh;
   overflow: hidden;
 }
 
 .hero-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;    /* cobre sem distorcer */
+  object-fit: cover;
   display: block;
 }
 
 .hero-text {
   position: absolute;
-  z-index: 2; /* fica acima da imagem */
+  z-index: 2;
 }
 
 .hero-text.hero-bottom-left {
-  position: absolute;
-  bottom: 40px;           /* canto inferior */
-  left: 50px;             /* alinhado à esquerda */
+  bottom: 40px;
+  left: 50px;
   max-width: 700px;
   text-align: left;
 }
 
 .hero-text.hero-bottom-left h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;        /* bem grande */
+  font-size: 3rem;
   font-weight: 700;
-  color: #c0c0c0;         /* prata escuro */
+  color: #c0c0c0;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
   opacity: 0;
   animation: fadeInUp 3s ease forwards;
-  animation-delay: 0.5s;  /* aparece primeiro */
+  animation-delay: 0.5s;
 }
 
 .hero-text.hero-bottom-left .intro-text {
   font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
   font-weight: 500;
-  color: #c0c0c0;         /* prata escuro */
+  color: #c0c0c0;
   line-height: 1.4;
   letter-spacing: 0.5px;
   margin-top: 10px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
   opacity: 0;
   animation: fadeInUp 3s ease forwards;
-  animation-delay: 1.5s;  /* aparece depois do nome */
+  animation-delay: 1.5s;
 }
 
-.hero-text h1 {
-  font-size: 20rem;
-  font-weight: 700;
-}
-
-.hero-text h2 {
-  font-size: 4rem;
-  color: red;       /* aumenta o tamanho da fonte */
-  font-weight: 600;       /* deixa mais marcante */
-  color: #ffffff;         /* branco para contraste */
-  text-shadow: 0 2px 6px rgba(0,0,0,0.4); /* sombra suave para destacar */
-  letter-spacing: 1px;    /* espaçamento entre letras para elegância */
-  margin-top: 15px;
-  animation: fadeInUp 1.5s ease;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
-}
-
+/* ===========================
+   CARDS
+   =========================== */
 .card-title {
   font-weight: 600;
   color: #2c2c2c;
@@ -86,6 +65,16 @@
   color: #555;
 }
 
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ===========================
+   BUTTONS
+   =========================== */
 .btn-outline-primary {
   border-color: #b85c38;
   color: #b85c38;
@@ -96,11 +85,17 @@
   color: white;
 }
 
-.card-img-top {
+/* ===========================
+   EFFECTS
+   =========================== */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 200px;       /* altura fixa para todas */
-  object-fit: cover;   /* ajusta sem distorcer */
-  object-position: center; /* centraliza o foco */
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
 }
 
 @keyframes fadeInUp {
@@ -113,6 +108,5 @@
     transform: translateY(0);
   }
 }
-
 
 
