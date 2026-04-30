@@ -12,6 +12,18 @@
   object-position: center; /* centraliza o foco */
 }
 
+.intro-text {
+  font-family: 'Playfair Display', serif; /* fonte sofisticada */
+  font-size: 2.2rem;                      /* bem maior */
+  font-weight: 600;                       /* marcante */
+  color: #2c2c2c;                         /* contraste elegante */
+  text-align: center;                     /* centralizado */
+  line-height: 1.6;                       /* espaçamento agradável */
+  letter-spacing: 1px;                    /* leve espaçamento */
+  margin: 40px auto;
+  max-width: 900px;                       /* mantém proporção minimalista */
+}
+
 .hero-text {
   position: absolute;
   bottom: 40px;
@@ -97,15 +109,5 @@
   }
 }
 
-.intro-text {
-  font-family: 'Playfair Display', serif; /* fonte sofisticada */
-  font-size: 2rem;                        /* bem maior */
-  font-weight: 600;                       /* marcante */
-  color: #2c2c2c;                         /* contraste elegante */
-  text-align: center;                     /* centralizado */
-  line-height: 1.6;                       /* espaçamento agradável */
-  letter-spacing: 1px;                    /* leve espaçamento */
-  margin: 40px auto;
-  max-width: 900px;                       /* mantém proporção minimalista */
-}
+
 
