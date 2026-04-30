@@ -12,6 +12,14 @@
   object-position: center; /* centraliza o foco */
 }
 
+.hero-text.hero-top-right {
+  position: absolute;
+  top: 40px;              /* canto superior */
+  right: 50px;            /* alinhado à direita */
+  max-width: 700px;       /* garante duas linhas */
+  text-align: right;      /* texto alinhado à direita */
+}
+
 .hero-text.hero-top-right .intro-text {
   font-family: 'Playfair Display', serif;
   font-size: 1.6rem;       /* maior e elegante */
