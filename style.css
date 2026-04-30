@@ -12,12 +12,12 @@
   object-position: center; /* centraliza o foco */
 }
 
-.hero-text.hero-right {
+.hero-text.hero-top-right {
   position: absolute;
-  bottom: 40px;
-  right: 50px;             /* alinhado à direita */
-  max-width: 700px;        /* garante duas linhas */
-  text-align: right;       /* texto alinhado à direita */
+  top: 40px;              /* canto superior */
+  right: 50px;            /* alinhado à direita */
+  max-width: 700px;       /* garante duas linhas */
+  text-align: right;      /* texto alinhado à direita */
 }
 
 .intro-text {
@@ -27,7 +27,7 @@
   color: #bfa46f;                         /* dourado discreto */
   line-height: 1.3;                       /* compacto */
   letter-spacing: 0.5px;                  /* leve espaçamento */
-  margin-top: 15px;
+  margin-top: 10px;
   opacity: 0;                             /* começa invisível */
   animation: fadeInUp 1.5s ease forwards; /* animação suave */
 }
