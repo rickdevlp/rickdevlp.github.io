@@ -31,11 +31,9 @@
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   font-weight: 700;
-  color: #c0c0c0; /* prata escuro */
+  color: #c0c0c0;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-  opacity: 0;
-  animation: fadeInUp 3s ease forwards;
-  animation-delay: 0.5s;
+  opacity: 1; /* <<< força a visibilidade */
 }
 
 /* Parágrafo */
