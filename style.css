@@ -84,3 +84,14 @@
   object-fit: cover;   /* ajusta sem distorcer */
   object-position: center; /* centraliza o foco */
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
