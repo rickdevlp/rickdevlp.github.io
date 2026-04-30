@@ -27,10 +27,10 @@
 
 .hero-text.hero-bottom-left h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;        /* bem grande para destaque */
+  font-size: 3rem;        /* bem grande */
   font-weight: 700;
   color: #c0c0c0;         /* prata escuro */
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.8); /* sombra forte para contraste */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
   opacity: 0;
   animation: fadeInUp 3s ease forwards;
   animation-delay: 0.5s;  /* aparece primeiro */
@@ -48,28 +48,6 @@
   opacity: 0;
   animation: fadeInUp 3s ease forwards;
   animation-delay: 1.5s;  /* aparece depois do nome */
-}
-
-.hero-text.hero-top-right {
-  position: absolute;
-  top: 40px;              /* canto superior */
-  right: 50px;            /* alinhado à direita */
-  max-width: 700px;       /* garante duas linhas */
-  text-align: right;      /* texto alinhado à direita */
-}
-
-.hero-text.hero-top-right .intro-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #c0c0c0; /* prata escuro */
-  line-height: 1.4;
-  letter-spacing: 0.5px;
-  margin-top: 10px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-  opacity: 0;
-  animation: fadeInUp 3s ease forwards;
-  animation-delay: 1.5s; /* parágrafo aparece depois */
 }
 
 .hero-text h1 {
