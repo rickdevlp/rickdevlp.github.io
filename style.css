@@ -58,17 +58,6 @@
   text-align: right;      /* texto alinhado à direita */
 }
 
-.hero-text.hero-top-right h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #c0c0c0; /* prata escuro */
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-  opacity: 0;
-  animation: fadeInUp 3s ease forwards;
-  animation-delay: 0.5s; /* título aparece primeiro */
-}
-
 .hero-text.hero-top-right .intro-text {
   font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
@@ -82,6 +71,7 @@
   animation: fadeInUp 3s ease forwards;
   animation-delay: 1.5s; /* parágrafo aparece depois */
 }
+
 .hero-text h1 {
   font-size: 20rem;
   font-weight: 700;
