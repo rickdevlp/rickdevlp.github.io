@@ -1,21 +1,14 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh; /* ocupa toda a altura da tela */
-  overflow: hidden;
-}
-
-.hero {
-  position: relative;
-  width: 100%;
   height: 100vh;        /* ocupa toda a altura da tela */
-  overflow: hidden;     /* evita cortes estranhos */
+  overflow: hidden;
 }
 
 .hero-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;    /* cobre toda a área sem distorcer */
+  object-fit: cover;    /* cobre sem distorcer */
   display: block;
 }
 
@@ -34,15 +27,15 @@
 
 .hero-text.hero-top-right .intro-text {
   font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;       /* maior e elegante */
+  font-size: 1.6rem;
   font-weight: 500;
-  color: #c0c0c0;          /* prata escuro */
+  color: #c0c0c0; /* prata escuro */
   line-height: 1.4;
   letter-spacing: 0.5px;
   margin-top: 10px;
   opacity: 0;
   animation: fadeInUp 1.5s ease forwards;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.6); /* sombra leve para contraste */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* sombra leve */
 }
 
 .hero-text h1 {
