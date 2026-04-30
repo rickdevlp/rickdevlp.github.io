@@ -34,13 +34,6 @@ footer {
   color: #2c2c2c;
 }
 
-.foto-perfil {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%; /* deixa a foto redonda */
-  object-fit: cover;  /* ajusta a imagem sem distorcer */
-  margin-bottom: 20px;
-}
 .hero {
   position: relative;
   width: 100%;
