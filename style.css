@@ -1,39 +1,3 @@
-body {
-  font-family: 'Georgia', serif;
-  background-color: #f7f6f4;
-  color: #2c2c2c;
-  margin: 0;
-  padding: 0;
-}
-
-.topo {
-  background-color: #e5ded4;
-}
-
-h1, h2, h3 {
-  font-weight: 400;
-}
-
-a {
-  color: #b85c38;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-main {
-  max-width: 800px;
-  margin: auto;
-  line-height: 1.8;
-}
-
-footer {
-  background-color: #e5ded4;
-  color: #2c2c2c;
-}
-
 .hero {
   position: relative;
   width: 100%;
@@ -44,8 +8,8 @@ footer {
 .hero-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* faz a imagem preencher sem distorcer */
-  object-position: center; /* centraliza o foco da imagem */
+  object-fit: cover; /* preenche sem distorcer */
+  object-position: center; /* centraliza o foco */
 }
 
 .hero-text {
@@ -76,4 +40,3 @@ footer {
   height: 100%;
   background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
 }
-
