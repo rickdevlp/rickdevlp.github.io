@@ -12,7 +12,6 @@
 .hero-image {
   width: 100%;
   height: auto;
-  display: block;
   z-index: 1;
 }
 
@@ -33,7 +32,7 @@
   font-family: 'Playfair Display', serif;
   font-size: 1.6rem;       /* maior e elegante */
   font-weight: 500;
-  color: #bfa46f;          /* dourado discreto */
+  color: #a67c00;          /* dourado mais escuro */
   line-height: 1.4;
   letter-spacing: 0.5px;
   margin-top: 10px;
