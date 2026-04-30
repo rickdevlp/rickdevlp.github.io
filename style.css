@@ -22,16 +22,15 @@
 
 .intro-text {
   font-family: 'Playfair Display', serif; /* fonte sofisticada */
-  font-size: 1.1rem;                      /* proporcional */
+  font-size: 1.4rem;                      /* um pouco maior */
   font-weight: 500;                       /* elegante */
   color: #bfa46f;                         /* dourado discreto */
-  line-height: 1.3;                       /* compacto */
+  line-height: 1.7;                       /* espaçamento agradável */
   letter-spacing: 0.5px;                  /* leve espaçamento */
   margin-top: 10px;
   opacity: 0;                             /* começa invisível */
   animation: fadeInUp 1.5s ease forwards; /* animação suave */
 }
-
 .hero-text h1 {
   font-size: 3rem;
   font-weight: 700;
