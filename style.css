@@ -27,6 +27,12 @@
 }
 
 .hero-text h2 {
+  font-size: 2rem;        /* aumenta o tamanho da fonte */
+  font-weight: 600;       /* deixa mais marcante */
+  color: #ffffff;         /* branco para contraste */
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4); /* sombra suave para destacar */
+  letter-spacing: 1px;    /* espaçamento entre letras para elegância */
+  margin-top: 15px;
   animation: fadeInUp 1.5s ease;
 }
 
