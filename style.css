@@ -17,17 +17,19 @@
   position: absolute;
   top: 40px;
   right: 50px;
-  max-width: 500px;
+  max-width: 600px;   /* aumenta a largura do bloco */
   text-align: right;
   z-index: 2;
 }
 
 .hero-text.hero-top-right .intro-text {
   font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  font-weight: 500;
+  font-size: 2.4rem;   /* fonte maior para impacto */
+  font-weight: 600;    /* mais marcante */
   color: #c0c0c0;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  line-height: 1.5;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
   opacity: 0;
   animation: fadeInUp 3s ease forwards;
   animation-delay: 1.5s;
@@ -45,10 +47,10 @@
 
 .hero-text.hero-bottom-full h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 10vw;      /* responsivo: ocupa largura da tela */
+  font-size: 12vw;      /* responsivo: ocupa largura da tela */
   font-weight: 700;
   color: #c0c0c0;
-  text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
+  text-shadow: 4px 4px 10px rgba(0,0,0,0.9);
   opacity: 0;
   animation: fadeInUp 3s ease forwards;
   animation-delay: 0.5s;
