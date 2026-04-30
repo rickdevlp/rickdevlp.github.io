@@ -53,14 +53,6 @@
   animation-delay: 1.5s;
 }
 
-/* REMOVA ou COMENTE esta regra global que causa conflito */
- /*
-.hero-text h1 {
-  font-size: 20rem;
-  font-weight: 700;
-}
-*/
-
 /* GRADIENTE DE FUNDO */
 .hero::after {
   content: "";
