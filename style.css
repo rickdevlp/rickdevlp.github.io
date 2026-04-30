@@ -8,14 +8,15 @@
 .hero {
   position: relative;
   width: 100%;
-  height: auto;
-  overflow: hidden; /* evita cortes estranhos */
+  height: 100vh;        /* ocupa toda a altura da tela */
+  overflow: hidden;     /* evita cortes estranhos */
 }
 
 .hero-image {
   width: 100%;
-  height: 100vh;       /* ocupa toda a altura da tela */
-  object-fit: cover;   /* cobre sem distorcer */
+  height: 100%;
+  object-fit: cover;    /* cobre toda a área sem distorcer */
+  display: block;
 }
 
 .hero-text {
@@ -41,6 +42,7 @@
   margin-top: 10px;
   opacity: 0;
   animation: fadeInUp 1.5s ease forwards;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6); /* sombra leve para contraste */
 }
 
 .hero-text h1 {
