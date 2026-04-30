@@ -34,7 +34,8 @@
   letter-spacing: 0.5px;
   margin-top: 10px;
   opacity: 0;
-  animation: fadeInUp 3s ease forwards; /* duração aumentada para 3 segundos */
+  animation: fadeInUp 3s ease forwards;   /* duração maior */
+  animation-delay: 1s;                    /* começa após 1 segundo */
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
