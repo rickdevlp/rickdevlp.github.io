@@ -14,14 +14,14 @@
 
 .intro-text {
   font-family: 'Playfair Display', serif; /* fonte sofisticada */
-  font-size: 1.2rem;                      /* menor e elegante */
-  font-weight: 500;                       /* leve, mas marcante */
-  color: #2c2c2c;                         /* contraste limpo */
-  text-align: center;                     /* centralizado */
-  line-height: 1.4;                       /* compacto */
+  font-size: 1.1rem;                      /* proporcional */
+  font-weight: 500;                       /* elegante */
+  color: #bfa46f;                         /* dourado discreto */
+  text-align: left;                       /* alinhado à esquerda */
+  line-height: 1.3;                       /* compacto */
   letter-spacing: 0.5px;                  /* leve espaçamento */
-  margin: 15px auto 0;                    /* bem próximo da foto */
-  max-width: 650px;                       /* limita largura para caber em 2 linhas */
+  margin: 20px 0 0 40px;                  /* próximo da foto */
+  max-width: 700px;                       /* limita largura para caber em 2 linhas */
   opacity: 0;                             /* começa invisível */
   animation: fadeInUp 1.5s ease forwards; /* animação suave */
 }
