@@ -78,3 +78,12 @@
     transform: translateY(0);
   }
 }
+
+.card-img-top {
+  width: 100%;              /* ocupa toda a largura do card */
+  height: 250px;            /* altura fixa para todas as imagens */
+  object-fit: cover;        /* mantém proporção sem distorcer */
+  object-position: center;  /* centraliza o foco da imagem */
+  border-radius: 6px;       /* opcional: cantos arredondados */
+}
+
