@@ -75,6 +75,20 @@
   <footer class="text-center py-4">
     <p>© 2026 Ricardo Ninomiya | Todos os direitos reservados</p>
   </footer>
+  <script>
+  window.addEventListener('scroll', function() {
+    const heroImage = document.querySelector('.hero-image');
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    // Calcula opacidade: 1 no topo, 0 ao rolar uma altura de tela
+    let opacity = 1 - scrollTop / windowHeight;
+    if (opacity < 0) opacity = 0;
+    heroImage.style.opacity = opacity;
+  });
+</script>
+
+  
 </body>
 </html>
 
