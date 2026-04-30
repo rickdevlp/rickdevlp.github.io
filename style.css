@@ -12,14 +12,18 @@
   object-position: center; /* centraliza o foco */
 }
 
-.hero-text.hero-top-right .intro-text { 
-  font-size: 20.4rem;
-  position: absolute;
-  top: 40px;              /* canto superior */
-  right: 50px;            /* alinhado à direita */
-  max-width: 700px;       /* garante duas linhas */
-  text-align: right;      /* texto alinhado à direita */
+.hero-text.hero-top-right .intro-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;       /* maior e elegante */
+  font-weight: 500;
+  color: #bfa46f;          /* dourado discreto */
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease forwards;
 }
+
 
 .intro-text {
   font-family: 'Playfair Display', serif; /* fonte sofisticada */
