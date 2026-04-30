@@ -12,7 +12,8 @@
   object-position: center; /* centraliza o foco */
 }
 
-.hero-text.hero-top-right {
+.hero-text.hero-top-right .intro-text { 
+  font-size: 20.4rem;
   position: absolute;
   top: 40px;              /* canto superior */
   right: 50px;            /* alinhado à direita */
