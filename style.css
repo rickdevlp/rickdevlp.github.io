@@ -17,6 +17,39 @@
   z-index: 2; /* fica acima da imagem */
 }
 
+.hero-text.hero-bottom-left {
+  position: absolute;
+  bottom: 40px;           /* canto inferior */
+  left: 50px;             /* alinhado à esquerda */
+  max-width: 700px;
+  text-align: left;
+}
+
+.hero-text.hero-bottom-left h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;        /* bem grande para destaque */
+  font-weight: 700;
+  color: #c0c0c0;         /* prata escuro */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8); /* sombra forte para contraste */
+  opacity: 0;
+  animation: fadeInUp 3s ease forwards;
+  animation-delay: 0.5s;  /* aparece primeiro */
+}
+
+.hero-text.hero-bottom-left .intro-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #c0c0c0;         /* prata escuro */
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  opacity: 0;
+  animation: fadeInUp 3s ease forwards;
+  animation-delay: 1.5s;  /* aparece depois do nome */
+}
+
 .hero-text.hero-top-right {
   position: absolute;
   top: 40px;              /* canto superior */
