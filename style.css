@@ -14,15 +14,16 @@
 
 .intro-text {
   font-family: 'Playfair Display', serif; /* fonte sofisticada */
-  font-size: 2.2rem;                      /* bem maior */
-  font-weight: 600;                       /* marcante */
-  color: #2c2c2c;                         /* contraste elegante */
+  font-size: 1.4rem;                      /* menor que antes */
+  font-weight: 500;                       /* elegante, não pesado */
+  color: #2c2c2c;                         /* contraste limpo */
   text-align: center;                     /* centralizado */
-  line-height: 1.6;                       /* espaçamento agradável */
-  letter-spacing: 1px;                    /* leve espaçamento */
-  margin: 40px auto;
-  max-width: 900px;                       /* mantém proporção minimalista */
+  line-height: 1.4;                       /* mais compacto */
+  letter-spacing: 0.5px;                  /* leve espaçamento */
+  margin: 20px auto 0;                    /* aproxima da foto */
+  max-width: 700px;                       /* limita largura */
 }
+
 
 .hero-text {
   position: absolute;
