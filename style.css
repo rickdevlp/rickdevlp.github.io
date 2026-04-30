@@ -96,3 +96,15 @@
     transform: translateY(0);
   }
 }
+
+.intro-text {
+  font-size: 1.5rem;          /* aumenta o tamanho */
+  font-weight: 600;           /* mais marcante */
+  color: #2c2c2c;             /* contraste com fundo claro */
+  text-align: center;         /* centraliza */
+  line-height: 1.6;           /* espaçamento agradável */
+  letter-spacing: 0.5px;      /* leve espaçamento entre letras */
+  margin: 30px auto;
+  max-width: 800px;           /* mantém proporção minimalista */
+}
+
