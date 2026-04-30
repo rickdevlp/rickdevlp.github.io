@@ -41,4 +41,36 @@ footer {
   object-fit: cover;  /* ajusta a imagem sem distorcer */
   margin-bottom: 20px;
 }
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* ocupa toda a altura da tela */
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* faz a imagem preencher sem distorcer */
+  object-position: center; /* centraliza o foco da imagem */
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-text h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
 
