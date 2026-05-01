@@ -93,9 +93,6 @@
 
 /* Responsividade */
 @media (max-width: 600px) {
-  .hero {
-    display: none; /* esconde a versão desktop */
-  }
   .hero-image {
     display: none; /* esconde a versão desktop */
   }
