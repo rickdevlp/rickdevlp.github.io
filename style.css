@@ -1,21 +1,15 @@
 .hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  background-image: url("images/perfil6.png");
-  background-size: cover;
-  background-position: center;
+  height: 100vh;
   overflow: hidden;
 }
 
 .hero-image {
-  display: none; /* esconde o <img>, já que usamos como fundo */
-}
-
-.hero-image {
   width: 100%;
-  height: 100%;       /* ocupa toda a altura da tela */
-  object-fit: cover;   /* cobre sem distorcer */
+  height: 100vh;
+  object-fit: cover;
+  object-position: center; /* padrão: centralizado no desktop */
   display: block;
 }
 
@@ -24,15 +18,15 @@
   position: absolute;
   top: 40px;
   right: 50px;
-  max-width: 600px;   /* aumenta a largura do bloco */
+  max-width: 600px;
   text-align: right;
   z-index: 2;
 }
 
 .hero-text.hero-top-right .intro-text {
   font-family: 'Playfair Display', serif;
-  font-size: 2.1rem;   /* fonte maior para impacto */
-  font-weight: 600;    /* mais marcante */
+  font-size: 2.1rem;
+  font-weight: 600;
   color: #c0c0c0;
   line-height: 1.5;
   letter-spacing: 1px;
@@ -47,14 +41,14 @@
   position: absolute;
   bottom: 20px;
   left: 0;
-  width: 100%;          /* ocupa toda a largura */
-  text-align: center;   /* centraliza horizontalmente */
+  width: 100%;
+  text-align: center;
   z-index: 2;
 }
 
 .hero-text.hero-bottom-full h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 12vw;      /* responsivo: ocupa largura da tela */
+  font-size: 12vw;
   font-weight: 700;
   color: #c0c0c0;
   text-shadow: 4px 4px 10px rgba(0,0,0,0.9);
@@ -74,6 +68,43 @@
   background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
   z-index: 1;
 }
+
+/* Animação */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade para celular */
+@media (max-width: 600px) {
+  .hero-image {
+    object-position: left center; /* foca na metade esquerda da foto */
+  }
+
+  .hero-text.hero-bottom-full h1 {
+    font-size: 8vw; /* reduz o tamanho do nome */
+  }
+
+  .hero-text.hero-bottom-full {
+    bottom: 10px; /* sobe o texto para não sair da tela */
+  }
+
+  .hero-text.hero-top-right {
+    right: 20px;
+    max-width: 80%; /* ajusta largura do texto no mobile */
+  }
+
+  .hero-text.hero-top-right .intro-text {
+    font-size: 1.2rem; /* reduz fonte para caber melhor */
+  }
+}
+
 
 @keyframes fadeInUp {
   from {
@@ -136,7 +167,7 @@
 
 /* No celular, mostrar só o lado esquerdo */
 @media (max-width: 600px) {
-  .hero {
+  .hero-image {
     object-position: left center; /* foca na metade esquerda */
   }
 }
