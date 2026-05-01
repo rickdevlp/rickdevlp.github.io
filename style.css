@@ -21,14 +21,6 @@
   display: none;      /* escondida por padrão */
 }
 
-.hero-image.desktop {
-  display: block; /* mostra desktop por padrão */
-}
-
-.hero-image.mobile {
-  display: none;  /* esconde mobile por padrão */
-}
-
 /* Gradiente */
 .hero::after {
   content: "";
@@ -40,6 +32,7 @@
   background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
   z-index: 1;
 }
+
 /* Texto superior direito */
 .hero-text.hero-top-right {
   position: absolute;
