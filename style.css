@@ -13,14 +13,12 @@
   display: block;
 }
 
-/* Mostra versão desktop por padrão */
-.hero-image {
-  display: block;
+.hero-image.desktop {
+  display: block; /* mostra desktop por padrão */
 }
 
-/* Esconde versão mobile por padrão */
 .hero-image.mobile {
-  display: none;
+  display: none;  /* esconde mobile por padrão */
 }
 
 /* Texto superior direito */
@@ -93,7 +91,7 @@
 
 /* Responsividade */
 @media (max-width: 600px) {
-  .hero-image {
+  .hero-image.desktop {
     display: none; /* esconde a versão desktop */
   }
   .hero-image.mobile {
