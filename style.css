@@ -136,7 +136,7 @@
 
 /* No celular, mostrar só o lado esquerdo */
 @media (max-width: 600px) {
-  .hero-image {
+  .hero {
     object-position: left center; /* foca na metade esquerda */
   }
 }
