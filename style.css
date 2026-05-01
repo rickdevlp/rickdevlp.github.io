@@ -17,9 +17,8 @@
 /* Estilo base para mobile */
 .hero-image.mobile {
   width: 100%;
-  height: auto;       /* deixa a altura natural da foto */
-  object-fit: none;   /* não força ajuste */
-  object-position: left top; /* mostra só o recorte que você preparou */
+  height: auto;       /* não força altura */
+  object-fit: none;   /* não corta */
   display: none;      /* escondida por padrão */
 }
 
