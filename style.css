@@ -97,23 +97,11 @@
 
   .hero-text.hero-top-right {
     right: 20px;
-    max-width: 80%; /* ajusta largura do texto no mobile */
+    max-width: 80%;
   }
 
   .hero-text.hero-top-right .intro-text {
-    font-size: 1.2rem; /* reduz fonte para caber melhor */
-  }
-}
-
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+    font-size: 1.2rem;
   }
 }
 
