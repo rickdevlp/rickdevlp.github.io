@@ -86,6 +86,10 @@
 
 /* Responsividade */
 @media (max-width: 1024px) {
+  .hero {
+    height: auto;       /* deixa a altura natural da imagem */
+    overflow: visible;  /* não corta */
+  }
   .hero-image.desktop { display: none; }
   .hero-image.mobile { display: block; }
 
