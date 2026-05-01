@@ -93,9 +93,8 @@
     <p>© 2026 Ricardo Ninomiya | Todos os direitos reservados</p>
   </footer>
     
- <script>
+<script>
   window.addEventListener('scroll', function() {
-    // Aplica opacidade apenas na imagem visível
     document.querySelectorAll('.hero-image').forEach(img => {
       if (window.getComputedStyle(img).display !== 'none') {
         const scrollTop = window.scrollY;
@@ -107,6 +106,7 @@
     });
   });
 </script>
+
 
 </body>
 </html>
