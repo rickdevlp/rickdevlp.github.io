@@ -17,9 +17,10 @@
 /* Mobile */
 .hero-image.mobile {
   width: 100%;
-  height: auto;       /* altura natural */
-  object-fit: none;   /* não corta */
-  display: none;      /* escondida por padrão */
+  height: 100vh;        /* força a ocupar a tela toda */
+  object-fit: cover;    /* ajusta para cobrir sem distorcer */
+  object-position: top; /* foca no topo da imagem */
+  display: none;
 }
 
 /* Gradiente */
