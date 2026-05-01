@@ -14,7 +14,7 @@
 
 .hero-image {
   width: 100%;
-  height: 100vh;       /* ocupa toda a altura da tela */
+  height: 100%;       /* ocupa toda a altura da tela */
   object-fit: cover;   /* cobre sem distorcer */
   display: block;
 }
@@ -140,4 +140,25 @@
     object-position: left center; /* foca na metade esquerda */
   }
 }
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .contact {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+  .contact-item {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-text.hero-bottom-full {
+    bottom: 10px;   /* sobe o texto */
+  }
+  .hero-text.hero-bottom-full h1 {
+    font-size: 8vw; /* reduz o tamanho do nome */
+  }
+}
+
 
