@@ -134,6 +134,13 @@
   color: #0077b6;
 }
 
+/* No celular, mostrar só o lado esquerdo */
+@media (max-width: 600px) {
+  .hero-image {
+    object-position: left center; /* foca na metade esquerda */
+  }
+}
+
 /* Responsividade */
 @media (max-width: 600px) {
   .contact {
