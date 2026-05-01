@@ -13,6 +13,11 @@
   display: block;
 }
 
+/* Mostra versão desktop por padrão */
+.hero-image {
+  display: block;
+}
+
 /* Esconde versão mobile por padrão */
 .hero-image.mobile {
   display: none;
