@@ -86,18 +86,23 @@
 }
 
 /* Responsividade */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .hero {
     height: auto;       /* deixa a altura natural da imagem */
-    overflow: visible;  /* não corta */
+    overflow: visible;
   }
   .hero-image.desktop { display: none; }
   .hero-image.mobile { display: block; }
 
-  .hero-text.hero-bottom-full h1 { font-size: 8vw; }
-  .hero-text.hero-bottom-full { bottom: 10px; }
-  .hero-text.hero-top-right { right: 20px; max-width: 80%; }
-  .hero-text.hero-top-right .intro-text { font-size: 1.2rem; }
+  .hero-text.hero-top-right .intro-text {
+    font-size: 1.6rem;
+    line-height: 1.4;
+  }
+
+  .hero-text.hero-bottom-full h1 {
+    font-size: 10vw;
+    bottom: 20px; /* ajusta para caber na tela */
+  }
 }
 
 .card-img-top {
