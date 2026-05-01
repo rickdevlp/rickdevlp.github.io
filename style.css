@@ -85,7 +85,7 @@
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hero-image.desktop { display: none; }
   .hero-image.mobile { display: block; }
 
@@ -144,7 +144,7 @@
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .contact {
     padding: 1rem;
     gap: 0.5rem;
