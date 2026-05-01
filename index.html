@@ -92,20 +92,24 @@
   <footer class="text-center py-4">
     <p>© 2026 Ricardo Ninomiya | Todos os direitos reservados</p>
   </footer>
-  <script>
+    
+ <script>
   window.addEventListener('scroll', function() {
-    const heroImage = document.querySelector('.hero-image');
-    const scrollTop = window.scrollY;
-    const windowHeight = window.innerHeight;
+    // Seleciona todas as imagens da hero
+    document.querySelectorAll('.hero-image').forEach(img => {
+      // Aplica só na que está visível
+      if (window.getComputedStyle(img).display !== 'none') {
+        const scrollTop = window.scrollY;
+        const windowHeight = window.innerHeight;
 
-    // Calcula opacidade: 1 no topo, 0 ao rolar uma altura de tela
-    let opacity = 1 - scrollTop / windowHeight;
-    if (opacity < 0) opacity = 0;
-    heroImage.style.opacity = opacity;
+        let opacity = 1 - scrollTop / windowHeight;
+        if (opacity < 0) opacity = 0;
+        img.style.opacity = opacity;
+      }
+    });
   });
 </script>
 
-  
 </body>
 </html>
 
