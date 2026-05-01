@@ -85,16 +85,10 @@
 }
 
 /* Responsividade */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .hero-image.desktop { display: none; }
   .hero-image.mobile { display: block; }
-
-  .hero-text.hero-bottom-full h1 { font-size: 8vw; }
-  .hero-text.hero-bottom-full { bottom: 10px; }
-  .hero-text.hero-top-right { right: 20px; max-width: 80%; }
-  .hero-text.hero-top-right .intro-text { font-size: 1.2rem; }
 }
-
 
 .card-img-top {
   width: 100%;              /* ocupa toda a largura do card */
