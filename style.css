@@ -9,8 +9,9 @@
 }
 
 .hero-image {
-  display: none; /* esconde o <img>, já que usamos como background */
+  display: none; /* esconde o <img>, já que usamos como fundo */
 }
+
 .hero-image {
   width: 100%;
   height: 100vh;       /* ocupa toda a altura da tela */
