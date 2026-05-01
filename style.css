@@ -21,6 +21,14 @@
   display: none;      /* escondida por padrão */
 }
 
+.hero-image.desktop {
+  display: block; /* mostra desktop por padrão */
+}
+
+.hero-image.mobile {
+  display: none;  /* esconde mobile por padrão */
+}
+
 /* Gradiente */
 .hero::after {
   content: "";
