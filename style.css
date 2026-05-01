@@ -165,13 +165,6 @@
   color: #0077b6;
 }
 
-/* No celular, mostrar só o lado esquerdo */
-@media (max-width: 600px) {
-  .hero-image {
-    object-position: left center; /* foca na metade esquerda */
-  }
-}
-
 /* Responsividade */
 @media (max-width: 600px) {
   .contact {
@@ -182,14 +175,4 @@
     font-size: 1rem;
   }
 }
-
-@media (max-width: 600px) {
-  .hero-text.hero-bottom-full {
-    bottom: 10px;   /* sobe o texto */
-  }
-  .hero-text.hero-bottom-full h1 {
-    font-size: 8vw; /* reduz o tamanho do nome */
-  }
-}
-
 
