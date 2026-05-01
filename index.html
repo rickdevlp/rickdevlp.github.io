@@ -95,19 +95,18 @@
     
  <script>
   window.addEventListener('scroll', function() {
-    // Seleciona todas as imagens da hero
-    document.querySelectorAll('.hero-image').forEach(img => {
-      // Aplica só na que está visível
-      if (window.getComputedStyle(img).display !== 'none') {
-        const scrollTop = window.scrollY;
-        const windowHeight = window.innerHeight;
+  const heroImage = document.querySelector('.hero-image.desktop:is(:not([style*="display: none"]))') 
+                 || document.querySelector('.hero-image.mobile:is(:not([style*="display: none"]))');
 
-        let opacity = 1 - scrollTop / windowHeight;
-        if (opacity < 0) opacity = 0;
-        img.style.opacity = opacity;
-      }
-    });
-  });
+  if (!heroImage) return;
+
+  const scrollTop = window.scrollY;
+  const windowHeight = window.innerHeight;
+
+  let opacity = 1 - scrollTop / windowHeight;
+  if (opacity < 0) opacity = 0;
+  heroImage.style.opacity = opacity;
+});
 </script>
 
 </body>
