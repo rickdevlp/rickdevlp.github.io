@@ -5,22 +5,33 @@
   overflow: hidden;
 }
 
-.hero-image {
+/* Imagem desktop */
+.hero-image.desktop {
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  object-position: center; /* padrão: centralizado no desktop */
+  object-position: center;
   display: block;
 }
 
-.hero-image.desktop {
-  display: block; /* mostra desktop por padrão */
-}
-
+/* Imagem mobile */
 .hero-image.mobile {
-  display: none;  /* esconde mobile por padrão */
+  width: 100%;
+  height: auto;       /* deixa a altura natural da foto */
+  display: none;      /* escondida por padrão */
 }
 
+/* Gradiente */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+  z-index: 1;
+}
 /* Texto superior direito */
 .hero-text.hero-top-right {
   position: absolute;
@@ -92,10 +103,10 @@
 /* Responsividade */
 @media (max-width: 600px) {
   .hero-image.desktop {
-    display: none; /* esconde a versão desktop */
+    display: none; /* esconde desktop */
   }
   .hero-image.mobile {
-    display: block; /* mostra a versão mobile */
+    display: block; /* mostra mobile */
   }
 
   .hero-text.hero-bottom-full h1 {
