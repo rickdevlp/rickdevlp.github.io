@@ -13,6 +13,11 @@
   display: block;
 }
 
+/* Esconde versão mobile por padrão */
+.hero-image.mobile {
+  display: none;
+}
+
 /* Texto superior direito */
 .hero-text.hero-top-right {
   position: absolute;
@@ -81,25 +86,25 @@
   }
 }
 
-/* Responsividade para celular */
+/* Responsividade */
 @media (max-width: 600px) {
   .hero-image {
-    object-position: left center; /* foca na metade esquerda da foto */
+    display: none; /* esconde a versão desktop */
+  }
+  .hero-image.mobile {
+    display: block; /* mostra a versão mobile */
   }
 
   .hero-text.hero-bottom-full h1 {
-    font-size: 8vw; /* reduz o tamanho do nome */
+    font-size: 8vw;
   }
-
   .hero-text.hero-bottom-full {
-    bottom: 10px; /* sobe o texto para não sair da tela */
+    bottom: 10px;
   }
-
   .hero-text.hero-top-right {
     right: 20px;
     max-width: 80%;
   }
-
   .hero-text.hero-top-right .intro-text {
     font-size: 1.2rem;
   }
