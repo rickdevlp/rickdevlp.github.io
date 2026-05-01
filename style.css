@@ -17,8 +17,9 @@
 /* Mobile */
 .hero-image.mobile {
   width: 100%;
-  height: auto;
-  object-fit: none;
+  height: 100vh;        /* ocupa a tela inteira */
+  object-fit: cover;    /* cobre sem distorcer */
+  object-position: center;
   display: none;
 }
 
@@ -86,11 +87,6 @@
 
 /* Responsividade - unificado */
 @media (max-width: 1200px) {
-  .hero {
-    height: auto;       /* deixa a altura natural da imagem */
-    overflow: visible;
-  }
-
   .hero-image.desktop { display: none; }
   .hero-image.mobile { display: block; }
 
@@ -100,13 +96,13 @@
   }
 
   .hero-text.hero-top-right .intro-text {
-    font-size: 1.6rem;   /* maior para mobile */
+    font-size: 1.6rem;
     line-height: 1.4;
   }
 
   .hero-text.hero-bottom-full h1 {
-    font-size: 10vw;     /* ajusta tamanho */
-    bottom: 30px;        /* sobe para caber na tela */
+    font-size: 10vw;
+    bottom: 30px;
   }
 }
 
