@@ -88,14 +88,19 @@
 @media (max-width: 768px) {
   .hero-image.desktop { display: none; }
   .hero-image.mobile { display: block; }
+
+  .hero-text.hero-bottom-full h1 { font-size: 8vw; }
+  .hero-text.hero-bottom-full { bottom: 10px; }
+  .hero-text.hero-top-right { right: 20px; max-width: 80%; }
+  .hero-text.hero-top-right .intro-text { font-size: 1.2rem; }
 }
 
 .card-img-top {
-  width: 100%;              /* ocupa toda a largura do card */
-  height: 250px;            /* altura fixa para todas as imagens */
-  object-fit: cover;        /* mantém proporção sem distorcer */
-  object-position: center;  /* centraliza o foco da imagem */
-  border-radius: 6px;       /* opcional: cantos arredondados */
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 6px;
 }
 
 /* Estilo da seção de contato */
@@ -106,7 +111,7 @@
   justify-content: center;
   gap: 1rem;
   padding: 2rem;
-  background-color: #f8f9fa; /* fundo suave */
+  background-color: #f8f9fa;
   border-radius: 8px;
 }
 
@@ -124,7 +129,7 @@
 
 .contact-item i {
   margin-right: 8px;
-  color: #0077b6; /* cor de destaque */
+  color: #0077b6;
   font-size: 1.2rem;
 }
 
@@ -139,7 +144,7 @@
 }
 
 /* Responsividade */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .contact {
     padding: 1rem;
     gap: 0.5rem;
@@ -148,4 +153,3 @@
     font-size: 1rem;
   }
 }
-
