@@ -7,213 +7,164 @@ body {
 
 /* Hero Section */
 .hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  height: 100svh; /* Altura dinâmica para mobile */
-  background-color: #000;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    background-color: #000;
+    overflow: hidden;
 }
 
 .hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: opacity 0.1s ease-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 0.1s ease-out;
 }
 
 .hero-image.desktop { display: block; }
 .hero-image.mobile { display: none; }
 
-/* Gradiente de sobreposição para leitura */
+/* Gradiente de sobreposição */
 .hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.7) 100%);
-  z-index: 1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.7) 100%);
+    z-index: 1;
 }
 
-/* Texto Superior Direito */
+/* --- ESTILO DESKTOP (Padrão) --- */
+
 .hero-text.hero-top-right {
-  position: absolute;
-  top: 60px;
-  right: 50px;
-  max-width: 500px;
-  text-align: right;
-  z-index: 2;
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    max-width: 500px;
+    text-align: right;
+    z-index: 2;
 }
 
 .hero-text.hero-top-right .intro-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #e0e0e0;
-  line-height: 1.4;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
-  opacity: 0;
-  animation: fadeInUp 2s ease forwards;
-  animation-delay: 1s;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #e0e0e0;
+    line-height: 1.4;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+    opacity: 0;
+    animation: fadeInUp 2s ease forwards;
+    animation-delay: 1s;
 }
 
-/* Nome Inferior */
 .hero-text.hero-bottom-full {
-  position: absolute;
-  bottom: 30px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  z-index: 3;
-  padding: 0 15px;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    padding: 0 15px;
 }
 
 .hero-text.hero-bottom-full h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.5rem, 12vw, 8rem); 
-  font-weight: 700;
-  color: #ffffff;
-  text-shadow: 0px 4px 15px rgba(0,0,0,0.8);
-  margin: 0;
-  opacity: 0;
-  animation: fadeInUp 2s ease forwards;
-  animation-delay: 0.3s;
-  white-space: nowrap; 
-  overflow: visible;
-  display: block;
-  width: 100%;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 8vw, 7rem); /* Ajustado para Desktop não vazar */
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0px 4px 15px rgba(0,0,0,0.8);
+    margin: 0;
+    opacity: 0;
+    animation: fadeInUp 2s ease forwards;
+    animation-delay: 0.3s;
+    white-space: nowrap; 
 }
 
-/* Ajuste específico para garantir que caiba no mobile */
-@media (max-width: 480px) {
-  .hero-text.hero-bottom-full h1 {
-    font-size: 11vw; 
-    letter-spacing: -1px; /* Aproxima as letras para ganhar espaço */
-  }
-}
-
-/* Animações */
+/* Animação */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
-/* --- Responsividade (Ajuste Definitivo) --- */
+/* --- RESPONSIVIDADE (Mobile) --- */
 
 @media (max-width: 992px) {
-  /* Mantém a lógica de troca de imagem */
-  .hero-image.desktop { display: none !important; }
-  .hero-image.mobile { display: block !important; }
+    .hero-image.desktop { display: none !important; }
+    .hero-image.mobile { display: block !important; }
 
-  /* Ajuste do Texto Superior (Intro) no Mobile */
-  .hero-text.hero-top-right {
-    top: 30px; /* Sobe um pouco mais para dar espaço */
-    right: 0;
-    left: 0;
-    margin: 0 auto;
-    width: 90%;
-    text-align: center;
-    padding: 0 15px;
-  }
+    /* Intro centralizada no mobile */
+    .hero-text.hero-top-right {
+        top: 40px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        width: 90%;
+        text-align: center;
+        padding: 0 15px;
+    }
 
-  .hero-text.hero-top-right .intro-text {
-    font-size: clamp(1.1rem, 4vw, 1.4rem); /* Texto fluido e legível */
-    line-height: 1.3;
-  }
+    .hero-text.hero-top-right .intro-text {
+        font-size: clamp(1.2rem, 4.5vw, 1.5rem);
+        line-height: 1.3;
+    }
 
-  /* Ajuste do Nome (Ricardo Ninomiya) no Mobile - A SOLUÇÃO */
-  .hero-text.hero-bottom-full {
-    bottom: 40px; /* Distância do fundo */
-    padding: 0 10px; /* Margem de segurança nas laterais */
-  }
+    /* Nome com quebra de linha para não cortar o "ya" */
+    .hero-text.hero-bottom-full {
+        bottom: 50px;
+    }
 
-  .hero-text.hero-bottom-full h1 {
-    /* 1. Tamanho controlado: Clamp garante que não fique gigante nem minúsculo */
-    font-size: clamp(2.2rem, 10vw, 4rem); 
-    
-    /* 2. Permite quebra de linha: Essencial para não cortar o "ya" */
-    white-space: normal !important; 
-    
-    /* 3. Peso da fonte: Diminuir o peso (de 700 para 600) faz as letras ocuparem menos espaço horizontal */
-    font-weight: 600; 
-    
-    /* 4. Altura da linha: Ajusta o espaçamento entre "Ricardo" e "Ninomiya" se quebrar */
-    line-height: 1.1; 
-    
-    width: 100%;
-    text-align: center;
-    letter-spacing: -1px; /* Aproxima um pouco as letras */
-  }
+    .hero-text.hero-bottom-full h1 {
+        font-size: clamp(2.2rem, 11vw, 4rem);
+        white-space: normal !important; /* Permite quebra se necessário */
+        font-weight: 600;
+        line-height: 1.1;
+        letter-spacing: -1px;
+    }
 }
 
-/* Ajuste fino para celulares muito pequenos (ex: iPhone SE) */
+/* Ajuste para telas muito pequenas */
 @media (max-width: 380px) {
-  .hero-text.hero-bottom-full h1 {
-    font-size: 2rem; /* Tamanho fixo e seguro para telas mínimas */
-  }
+    .hero-text.hero-bottom-full h1 {
+        font-size: 2rem;
+    }
 }
 
-  /* Ajuste do Texto Superior no Mobile */
-  .hero-text.hero-top-right {
-    top: 40px;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
-    width: 90%;
-    text-align: center;
-  }
+/* --- OUTRAS SEÇÕES --- */
 
-  .hero-text.hero-top-right .intro-text {
-    font-size: 1.3rem;
-    line-height: 1.3;
-  }
-
-  /* Ajuste do Nome no Mobile */
-  .hero-text.hero-bottom-full {
-    bottom: 50px;
-  }
-
-  .hero-text.hero-bottom-full h1 {
-    font-size: 13vw; /* Ajusta para caber na largura sem quebrar */
-    white-space: nowrap;
-  }
-}
-
-/* Cards e Seções */
-.card { transition: transform 0.3s ease; }
+.card { transition: transform 0.3s ease; border-radius: 8px; overflow: hidden; }
 .card:hover { transform: translateY(-5px); }
 
 .card-img-top {
-  height: 200px;
-  object-fit: cover;
+    height: 200px;
+    object-fit: cover;
 }
 
-/* Contato */
 .contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fcfcfc;
-  padding: 40px 20px;
-  border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcfcfc;
+    padding: 40px 20px;
+    border-radius: 12px;
 }
 
 .contact-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
 }
 
 .contact-item i {
-  margin-right: 12px;
-  color: #0d6efd;
+    margin-right: 12px;
+    color: #0d6efd;
 }
 
 .contact-item a {
-  text-decoration: none;
-  color: #333;
+    text-decoration: none;
+    color: #333;
 }
