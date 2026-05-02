@@ -72,19 +72,23 @@ body {
 
 .hero-text.hero-bottom-full h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 14vw; /* Ocupa a largura total */
+    font-size: clamp(3rem, 12.5vw, 15rem); 
     font-weight: 700;
     color: #ffffff;
     text-shadow: 0px 4px 15px rgba(0,0,0,0.8);
-    margin: 0;
+    margin: 0 auto; /* Centraliza o bloco */
     opacity: 0;
     animation: fadeInUp 2s ease forwards;
     animation-delay: 0.3s;
+    
     white-space: nowrap;
     line-height: 0.85;
     letter-spacing: -2px;
+    
+    /* SEGURANÇA MÁXIMA: */
+    max-width: 95vw; /* Garante que o texto pare antes de chegar na quina da tela */
+    display: inline-block; 
 }
-
 /* Animação */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
