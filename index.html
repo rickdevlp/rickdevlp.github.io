@@ -12,6 +12,97 @@
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Cards - RickDev</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #cc092f;
+            --bg-color: #1a1a1a; /* Fundo escuro para contraste */
+            --card-bg: #fff;
+            --text-color: #fff;
+            --card-text: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        h1 {
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        /* Grid de Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            color: var(--card-text);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        /* Efeito de destaque no texto da bicicleta */
+        .card strong.highlight {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* Rodapé do card para status (ex: Anos) */
+        .card-footer {
+            margin-top: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+    </style>
+
 </head>
 <body>
 
@@ -73,6 +164,56 @@
       </div>
     </div>
   </section>
+
+<div class="container">
+    <header>
+        <h1>Quem sou eu</h1>
+        <p>A união de curiosidade criativa, persistência e paixão por dados.</p>
+    </header>
+
+    <div class="cards-grid">
+        
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-pencil-ruler"></i></div>
+            <h3>O Início Criativo</h3>
+            <p>Minha curiosidade nasceu desenhando. Paixão por Dragon Ball e animes, ganhei concursos na infância e descobri a alegria de criar do zero.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-language"></i></div>
+            <h3>Aprendiz Global</h3>
+            <p>Do sonho de ser jogador (Man Utd/Corinthians) veio a necessidade do inglês. Hoje, utilizo IA diariamente há 2 anos para conversação e estudo contínuo.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-bicycle"></i></div>
+            <h3>Explorador Versátil</h3>
+            <p>Tranquei Nutrição e Astronomia, mas descobri o prazer da atividade física. Curiosamente, <strong class="highlight">estudo e escrevo em cima de uma bicicleta ergométrica</strong> agora.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-chart-pie"></i></div>
+            <h3>Profissional de Dados</h3>
+            <p>Formado em ADS e com MBA em Gestão de TI. Referência técnica em BI, especializado em transformar dados em estratégia na Bradesco Cartões.</p>
+            <div class="card-footer">Desde 2019 em Dados</div>
+        </div>
+
+        <!-- Card 5 (Destaque) -->
+        <div class="card" style="grid-column: 1 / -1; border: 2px solid var(--primary-color);">
+            <div class="card-icon"><i class="fas fa-handshake"></i></div>
+            <h3>15 Anos de Bradesco: Uma História de Gratidão</h3>
+            <p>Comecei em 2011 na Orizon e tomei a decisão de trilhar meu próprio caminho ao aceitar o convite para ser funcionário. Desde então, visto a camisa de uma empresa que me gerou grandes oportunidades, vivências e da qual sou grato por fazer parte.</p>
+            <div class="card-footer">Jornada Iniciada em 08/12/2011</div>
+        </div>
+
+    </div>
+</div>
+
+  
 
   <section class="contact my-5" id="contact">
     <h2 class="mb-4">Contato</h2>
