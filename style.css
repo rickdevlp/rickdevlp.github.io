@@ -73,7 +73,7 @@ body {
 
 .hero-text.hero-bottom-full h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 8vw;
+  font-size: clamp(2.5rem, 12vw, 8rem); 
   font-weight: 700;
   color: #ffffff;
   text-shadow: 0px 4px 15px rgba(0,0,0,0.8);
@@ -81,6 +81,18 @@ body {
   opacity: 0;
   animation: fadeInUp 2s ease forwards;
   animation-delay: 0.3s;
+  white-space: nowrap; 
+  overflow: visible;
+  display: block;
+  width: 100%;
+}
+
+/* Ajuste específico para garantir que caiba no mobile */
+@media (max-width: 480px) {
+  .hero-text.hero-bottom-full h1 {
+    font-size: 11vw; 
+    letter-spacing: -1px; /* Aproxima as letras para ganhar espaço */
+  }
 }
 
 /* Animações */
