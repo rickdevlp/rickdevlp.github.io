@@ -26,7 +26,6 @@ body {
 .hero-image.desktop { display: block; }
 .hero-image.mobile { display: none; }
 
-/* Gradiente de sobreposição */
 .hero::after {
     content: "";
     position: absolute;
@@ -34,11 +33,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.7) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.8) 100%);
     z-index: 1;
 }
 
-/* --- ESTILO DESKTOP (Padrão) --- */
+/* --- ESTILO DESKTOP --- */
 
 .hero-text.hero-top-right {
     position: absolute;
@@ -63,17 +62,17 @@ body {
 
 .hero-text.hero-bottom-full {
     position: absolute;
-    bottom: 30px;
+    bottom: 5px; /* Quase encostado no rodapé do hero */
     left: 0;
     width: 100%;
     text-align: center;
     z-index: 3;
-    padding: 0 15px;
+    padding: 0;
 }
 
 .hero-text.hero-bottom-full h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(3rem, 8vw, 7rem); /* Ajustado para Desktop não vazar */
+    font-size: 14vw; /* Ocupa a largura total */
     font-weight: 700;
     color: #ffffff;
     text-shadow: 0px 4px 15px rgba(0,0,0,0.8);
@@ -81,7 +80,9 @@ body {
     opacity: 0;
     animation: fadeInUp 2s ease forwards;
     animation-delay: 0.3s;
-    white-space: nowrap; 
+    white-space: nowrap;
+    line-height: 0.85;
+    letter-spacing: -2px;
 }
 
 /* Animação */
@@ -96,7 +97,6 @@ body {
     .hero-image.desktop { display: none !important; }
     .hero-image.mobile { display: block !important; }
 
-    /* Intro centralizada no mobile */
     .hero-text.hero-top-right {
         top: 40px;
         right: 0;
@@ -104,38 +104,35 @@ body {
         margin: 0 auto;
         width: 90%;
         text-align: center;
-        padding: 0 15px;
     }
 
     .hero-text.hero-top-right .intro-text {
         font-size: clamp(1.2rem, 4.5vw, 1.5rem);
-        line-height: 1.3;
     }
 
-    /* Nome com quebra de linha para não cortar o "ya" */
     .hero-text.hero-bottom-full {
-        bottom: 50px;
+        bottom: 40px;
+        padding: 0 15px;
     }
 
     .hero-text.hero-bottom-full h1 {
-        font-size: clamp(2.2rem, 11vw, 4rem);
-        white-space: normal !important; /* Permite quebra se necessário */
+        font-size: clamp(2.3rem, 11vw, 5rem);
+        white-space: normal !important; /* Permite quebra se a tela for muito pequena */
         font-weight: 600;
         line-height: 1.1;
         letter-spacing: -1px;
     }
 }
 
-/* Ajuste para telas muito pequenas */
 @media (max-width: 380px) {
     .hero-text.hero-bottom-full h1 {
-        font-size: 2rem;
+        font-size: 2.1rem;
     }
 }
 
 /* --- OUTRAS SEÇÕES --- */
 
-.card { transition: transform 0.3s ease; border-radius: 8px; overflow: hidden; }
+.card { transition: transform 0.3s ease; border-radius: 8px; overflow: hidden; border: none; }
 .card:hover { transform: translateY(-5px); }
 
 .card-img-top {
@@ -150,6 +147,7 @@ body {
     background-color: #fcfcfc;
     padding: 40px 20px;
     border-radius: 12px;
+    text-align: center;
 }
 
 .contact-item {
