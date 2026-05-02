@@ -7,113 +7,13 @@
   
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Seu arquivo CSS principal (que agora contém tudo) -->
+  <link rel="stylesheet" href="style.css">
 
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste Acordeão - RickDev</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #cc092f;
-            --bg-color: #f9f9f9;
-            --text-color: #333;
-            --accordion-bg: #fff;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            padding: 40px 0;
-        }
-
-        h1 {
-            color: var(--primary-color);
-        }
-
-        /* Estilo do Acordeão */
-        .accordion-item {
-            background-color: var(--accordion-bg);
-            margin-bottom: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            overflow: hidden;
-            border: 1px solid #eee;
-        }
-
-        .accordion-header {
-            padding: 20px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: bold;
-            font-size: 1.1rem;
-            user-select: none;
-            transition: background-color 0.3s;
-        }
-
-        .accordion-header:hover {
-            background-color: #fff1f3;
-        }
-
-        .accordion-header h3 {
-            margin: 0;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-size: 1.1rem;
-        }
-
-        .accordion-header i.arrow {
-            transition: transform 0.3s ease;
-            color: #777;
-        }
-
-        .accordion-content {
-            max-height: 0; /* Escondido por padrão */
-            overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease;
-            padding: 0 20px;
-            border-top: 1px solid transparent;
-        }
-
-        /* Classe que será adicionada via JS */
-        .accordion-item.active .accordion-content {
-            max-height: 500px; /* Altura máxima permitida quando aberto */
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-
-        .accordion-item.active .accordion-header i.arrow {
-            transform: rotate(180deg);
-            color: var(--primary-color);
-        }
-
-        .highlight-quote {
-            font-style: italic;
-            border-left: 3px solid var(--primary-color);
-            padding-left: 15px;
-            margin: 15px 0;
-            color: #555;
-        }
-
-    </style>
 </head>
 <body>
 
@@ -137,9 +37,10 @@
   </div>
 </header>
 
-<main class="container py-5">
+<main> <!-- Removida a classe container daqui para a foto ir até a borda -->
+  
   <section id="projetos" class="py-5 bg-light">
-    <div class="container">
+    <div class="container"> <!-- O container fica DENTRO da section -->
       <h3 class="mb-4">Projetos em Destaque</h3>
       <div class="row">
         <div class="col-md-4">
@@ -176,74 +77,57 @@
     </div>
   </section>
 
-<div class="container">
-    <header>
-        <h1>Conheça minha Jornada</h1>
-        <p>Clique nas seções para expandir a história.</p>
-    </header>
+  <!-- SEÇÃO SOBRE MIM (Acordeão) -->
+  <section id="sobre" class="py-5">
+    <div class="container">
+        <header class="text-center mb-5">
+            <h2 class="display-5 fw-bold" style="color: var(--bradesco-red);">Conheça minha Jornada</h2>
+            <p class="lead text-muted">Clique nas seções para expandir a história.</p>
+        </header>
 
-  
-
-    <div class="accordion">
-        
-        <!-- Item 1 -->
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <h3><i class="fas fa-user-tag" style="color: var(--primary-color);"></i> Lado Pessoal e Curiosidades</h3>
-                <i class="fas fa-chevron-down arrow"></i>
-            </div>
-            <div class="accordion-content">
-                <p>Curioso por natureza, desenhar e animes foram meus primeiros hobbies. Sonhei com o futebol, o que me impulsionou a estudar inglês e, hoje, utilizo IA há 2 anos para aprimorar a conversação de forma confortável.</p>
-                <div class="highlight-quote">
-                    "Descobri que o momento mais versátil para praticar atividade física e estudar é em cima de uma bicicleta ergométrica, onde estou exatamente agora."
+        <div class="accordion-custom">
+            
+            <!-- Item 1 -->
+            <div class="accordion-item-custom">
+                <div class="accordion-header-custom">
+                    <h3><i class="fas fa-user-tag"></i> Lado Pessoal e Curiosidades</h3>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+                <div class="accordion-content-custom">
+                    <p>Curioso por natureza, desenhar e animes foram meus primeiros hobbies. Sonhei com o futebol, o que me impulsionou a estudar inglês e, hoje, utilizo IA há 2 anos para aprimorar a conversação de forma confortável.</p>
+                    <div class="highlight-quote">
+                        "Descobri que o momento mais versátil para praticar atividade física e estudar é em cima de uma bicicleta ergométrica, onde estou exatamente agora."
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Item 2 -->
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <h3><i class="fas fa-laptop-code" style="color: var(--primary-color);"></i> Transição de Carreira e Formação</h3>
-                <i class="fas fa-chevron-down arrow"></i>
+            <!-- Item 2 -->
+            <div class="accordion-item-custom">
+                <div class="accordion-header-custom">
+                    <h3><i class="fas fa-laptop-code"></i> Transição de Carreira e Formação</h3>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+                <div class="accordion-content-custom">
+                    <p>Após passagens por Ciências da Computação, Nutrição e Astronomia, formei-me em Análise e Desenvolvimento de Sistemas (ADS). Completei em sequência um MBA em Gestão da TI, focando em Governança e Metodologias Ágeis.</p>
+                </div>
             </div>
-            <div class="accordion-content">
-                <p>Após passagens por Ciências da Computação, Nutrição e Astronomia, formei-me em Análise e Desenvolvimento de Sistemas (ADS). Completei em sequência um MBA em Gestão da TI, focando em Governança e Metodologias Ágeis.</p>
-            </div>
-        </div>
 
-        <!-- Item 3 -->
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <h3><i class="fas fa-building" style="color: var(--primary-color);"></i> 15 Anos de Bradesco e BI</h3>
-                <i class="fas fa-chevron-down arrow"></i>
+            <!-- Item 3 -->
+            <div class="accordion-item-custom">
+                <div class="accordion-header-custom">
+                    <h3><i class="fas fa-building"></i> 15 Anos de Bradesco e BI</h3>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+                <div class="accordion-content-custom">
+                    <p>Iniciei minha jornada no Bradesco em 2011 via Orizon. Em novembro do mesmo ano, aceitei o convite para me tornar funcionário, vestindo a camisa desde então. Após quase 8 anos na Bradesco Saúde, mudei para a área de dados da Bradesco Cartões. Desde 2019 atuo como analista de BI, sendo referência técnica do meu setor.</p>
+                </div>
             </div>
-            <div class="accordion-content">
-                <p>Iniciei minha jornada no Bradesco em 2011 via Orizon. Em novembro do mesmo ano, aceitei o convite para me tornar funcionário, vestindo a camisa desde então. Após quase 8 anos na Bradesco Saúde, mudei para a área de dados da Bradesco Cartões. Desde 2019 atuo como analista de BI, sendo referência técnica do meu setor.</p>
-            </div>
-        </div>
 
+        </div>
     </div>
-</div>
+  </section>
 
-<!-- Script simples para o funcionamento do acordeão -->
-<script>
-    document.querySelectorAll('.accordion-header').forEach(header => {
-        header.addEventListener('click', () => {
-            const item = header.parentElement;
-            
-            // Fecha outros itens se quiser que apenas um fique aberto
-            // document.querySelectorAll('.accordion-item').forEach(otherItem => {
-            //     if (otherItem !== item) otherItem.classList.remove('active');
-            // });
-
-            item.classList.toggle('active');
-        });
-    });
-</script>
-
-  
-
-  <section class="contact my-5" id="contact">
+  <section class="contact container my-5 py-5" id="contact">
     <h2 class="mb-4">Contato</h2>
     <div class="contact-item">
       <i class="fas fa-envelope"></i>
@@ -264,8 +148,20 @@
   <p>© 2026 Ricardo Ninomiya | Todos os direitos reservados</p>
 </footer>
 
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
-  window.addEventListener('scroll', function() {
+    // Script do Acordeão
+    document.querySelectorAll('.accordion-header-custom').forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            item.classList.toggle('active');
+        });
+    });
+
+    // Script de Scroll do Hero
+    window.addEventListener('scroll', function() {
     document.querySelectorAll('.hero-image').forEach(img => {
       if (window.getComputedStyle(img).display !== 'none') {
         const scrollTop = window.scrollY;
