@@ -62,7 +62,7 @@ body {
 
 .hero-text.hero-bottom-full {
     position: absolute;
-    bottom: 5px; /* Quase encostado no rodapé do hero */
+    bottom: 10px; 
     left: 0;
     width: 100%;
     text-align: center;
@@ -72,11 +72,12 @@ body {
 
 .hero-text.hero-bottom-full h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(3rem, 12.5vw, 15rem); 
+    /* Reduzido para 11.5vw para garantir que caiba sem cortar o "a" final */
+    font-size: clamp(2.5rem, 11.5vw, 12rem); 
     font-weight: 700;
     color: #ffffff;
     text-shadow: 0px 4px 15px rgba(0,0,0,0.8);
-    margin: 0 auto; /* Centraliza o bloco */
+    margin: 0 auto;
     opacity: 0;
     animation: fadeInUp 2s ease forwards;
     animation-delay: 0.3s;
@@ -85,10 +86,12 @@ body {
     line-height: 0.85;
     letter-spacing: -2px;
     
-    /* SEGURANÇA MÁXIMA: */
-    max-width: 95vw; /* Garante que o texto pare antes de chegar na quina da tela */
-    display: inline-block; 
+    /* SEGURANÇA MÁXIMA PARA DESKTOP */
+    display: block;
+    width: 98vw; /* Usa quase toda a tela, mas deixa 1% de cada lado de margem invisível */
+    max-width: 100%;
 }
+
 /* Animação */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -115,16 +118,17 @@ body {
     }
 
     .hero-text.hero-bottom-full {
-        bottom: 40px;
-        padding: 0 15px;
+        bottom: 50px;
+        padding: 0 10px;
     }
 
     .hero-text.hero-bottom-full h1 {
         font-size: clamp(2.3rem, 11vw, 5rem);
-        white-space: normal !important; /* Permite quebra se a tela for muito pequena */
+        white-space: normal !important; 
         font-weight: 600;
         line-height: 1.1;
         letter-spacing: -1px;
+        width: 100%; /* Reseta o 98vw do desktop para o mobile */
     }
 }
 
