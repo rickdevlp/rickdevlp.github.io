@@ -15,94 +15,105 @@
 
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste Cards - RickDev</title>
+    <title>Teste Acordeão - RickDev</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --primary-color: #cc092f;
-            --bg-color: #1a1a1a; /* Fundo escuro para contraste */
-            --card-bg: #fff;
-            --text-color: #fff;
-            --card-text: #333;
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --accordion-bg: #fff;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
-            margin: 0;
             padding: 20px;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
         header {
             text-align: center;
-            padding: 50px 0;
+            padding: 40px 0;
         }
 
         h1 {
-            border-bottom: 3px solid var(--primary-color);
-            display: inline-block;
-            padding-bottom: 10px;
+            color: var(--primary-color);
         }
 
-        /* Grid de Cards */
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            padding: 20px 0;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            color: var(--card-text);
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            transition: all 0.3s ease;
-            position: relative;
+        /* Estilo do Acordeão */
+        .accordion-item {
+            background-color: var(--accordion-bg);
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             overflow: hidden;
-            border: 1px solid transparent;
+            border: 1px solid #eee;
         }
 
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary-color);
-        }
-
-        .card-icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            margin-top: 0;
-            font-size: 1.4rem;
-        }
-
-        /* Efeito de destaque no texto da bicicleta */
-        .card strong.highlight {
-            color: var(--primary-color);
-            font-weight: 700;
-        }
-
-        /* Rodapé do card para status (ex: Anos) */
-        .card-footer {
-            margin-top: 20px;
+        .accordion-header {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.8rem;
+            font-size: 1.1rem;
+            user-select: none;
+            transition: background-color 0.3s;
+        }
+
+        .accordion-header:hover {
+            background-color: #fff1f3;
+        }
+
+        .accordion-header h3 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1rem;
+        }
+
+        .accordion-header i.arrow {
+            transition: transform 0.3s ease;
             color: #777;
         }
 
-    </style>
+        .accordion-content {
+            max-height: 0; /* Escondido por padrão */
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            padding: 0 20px;
+            border-top: 1px solid transparent;
+        }
 
+        /* Classe que será adicionada via JS */
+        .accordion-item.active .accordion-content {
+            max-height: 500px; /* Altura máxima permitida quando aberto */
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .accordion-item.active .accordion-header i.arrow {
+            transform: rotate(180deg);
+            color: var(--primary-color);
+        }
+
+        .highlight-quote {
+            font-style: italic;
+            border-left: 3px solid var(--primary-color);
+            padding-left: 15px;
+            margin: 15px 0;
+            color: #555;
+        }
+
+    </style>
 </head>
 <body>
 
@@ -167,51 +178,68 @@
 
 <div class="container">
     <header>
-        <h1>Quem sou eu</h1>
-        <p>A união de curiosidade criativa, persistência e paixão por dados.</p>
+        <h1>Conheça minha Jornada</h1>
+        <p>Clique nas seções para expandir a história.</p>
     </header>
 
-    <div class="cards-grid">
+  
+
+    <div class="accordion">
         
-        <!-- Card 1 -->
-        <div class="card">
-            <div class="card-icon"><i class="fas fa-pencil-ruler"></i></div>
-            <h3>O Início Criativo</h3>
-            <p>Minha curiosidade nasceu desenhando. Paixão por Dragon Ball e animes, ganhei concursos na infância e descobri a alegria de criar do zero.</p>
+        <!-- Item 1 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h3><i class="fas fa-user-tag" style="color: var(--primary-color);"></i> Lado Pessoal e Curiosidades</h3>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <div class="accordion-content">
+                <p>Curioso por natureza, desenhar e animes foram meus primeiros hobbies. Sonhei com o futebol, o que me impulsionou a estudar inglês e, hoje, utilizo IA há 2 anos para aprimorar a conversação de forma confortável.</p>
+                <div class="highlight-quote">
+                    "Descobri que o momento mais versátil para praticar atividade física e estudar é em cima de uma bicicleta ergométrica, onde estou exatamente agora."
+                </div>
+            </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="card">
-            <div class="card-icon"><i class="fas fa-language"></i></div>
-            <h3>Aprendiz Global</h3>
-            <p>Do sonho de ser jogador (Man Utd/Corinthians) veio a necessidade do inglês. Hoje, utilizo IA diariamente há 2 anos para conversação e estudo contínuo.</p>
+        <!-- Item 2 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h3><i class="fas fa-laptop-code" style="color: var(--primary-color);"></i> Transição de Carreira e Formação</h3>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <div class="accordion-content">
+                <p>Após passagens por Ciências da Computação, Nutrição e Astronomia, formei-me em Análise e Desenvolvimento de Sistemas (ADS). Completei em sequência um MBA em Gestão da TI, focando em Governança e Metodologias Ágeis.</p>
+            </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="card">
-            <div class="card-icon"><i class="fas fa-bicycle"></i></div>
-            <h3>Explorador Versátil</h3>
-            <p>Tranquei Nutrição e Astronomia, mas descobri o prazer da atividade física. Curiosamente, <strong class="highlight">estudo e escrevo em cima de uma bicicleta ergométrica</strong> agora.</p>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="card">
-            <div class="card-icon"><i class="fas fa-chart-pie"></i></div>
-            <h3>Profissional de Dados</h3>
-            <p>Formado em ADS e com MBA em Gestão de TI. Referência técnica em BI, especializado em transformar dados em estratégia na Bradesco Cartões.</p>
-            <div class="card-footer">Desde 2019 em Dados</div>
-        </div>
-
-        <!-- Card 5 (Destaque) -->
-        <div class="card" style="grid-column: 1 / -1; border: 2px solid var(--primary-color);">
-            <div class="card-icon"><i class="fas fa-handshake"></i></div>
-            <h3>15 Anos de Bradesco: Uma História de Gratidão</h3>
-            <p>Comecei em 2011 na Orizon e tomei a decisão de trilhar meu próprio caminho ao aceitar o convite para ser funcionário. Desde então, visto a camisa de uma empresa que me gerou grandes oportunidades, vivências e da qual sou grato por fazer parte.</p>
-            <div class="card-footer">Jornada Iniciada em 08/12/2011</div>
+        <!-- Item 3 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h3><i class="fas fa-building" style="color: var(--primary-color);"></i> 15 Anos de Bradesco e BI</h3>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <div class="accordion-content">
+                <p>Iniciei minha jornada no Bradesco em 2011 via Orizon. Em novembro do mesmo ano, aceitei o convite para me tornar funcionário, vestindo a camisa desde então. Após quase 8 anos na Bradesco Saúde, mudei para a área de dados da Bradesco Cartões. Desde 2019 atuo como analista de BI, sendo referência técnica do meu setor.</p>
+            </div>
         </div>
 
     </div>
 </div>
+
+<!-- Script simples para o funcionamento do acordeão -->
+<script>
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            
+            // Fecha outros itens se quiser que apenas um fique aberto
+            // document.querySelectorAll('.accordion-item').forEach(otherItem => {
+            //     if (otherItem !== item) otherItem.classList.remove('active');
+            // });
+
+            item.classList.toggle('active');
+        });
+    });
+</script>
 
   
 
