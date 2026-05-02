@@ -101,11 +101,60 @@ body {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* --- Responsividade --- */
+/* --- Responsividade (Ajuste Definitivo) --- */
 
 @media (max-width: 992px) {
-  .hero-image.desktop { display: none; }
-  .hero-image.mobile { display: block; }
+  /* Mantém a lógica de troca de imagem */
+  .hero-image.desktop { display: none !important; }
+  .hero-image.mobile { display: block !important; }
+
+  /* Ajuste do Texto Superior (Intro) no Mobile */
+  .hero-text.hero-top-right {
+    top: 30px; /* Sobe um pouco mais para dar espaço */
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .hero-text.hero-top-right .intro-text {
+    font-size: clamp(1.1rem, 4vw, 1.4rem); /* Texto fluido e legível */
+    line-height: 1.3;
+  }
+
+  /* Ajuste do Nome (Ricardo Ninomiya) no Mobile - A SOLUÇÃO */
+  .hero-text.hero-bottom-full {
+    bottom: 40px; /* Distância do fundo */
+    padding: 0 10px; /* Margem de segurança nas laterais */
+  }
+
+  .hero-text.hero-bottom-full h1 {
+    /* 1. Tamanho controlado: Clamp garante que não fique gigante nem minúsculo */
+    font-size: clamp(2.2rem, 10vw, 4rem); 
+    
+    /* 2. Permite quebra de linha: Essencial para não cortar o "ya" */
+    white-space: normal !important; 
+    
+    /* 3. Peso da fonte: Diminuir o peso (de 700 para 600) faz as letras ocuparem menos espaço horizontal */
+    font-weight: 600; 
+    
+    /* 4. Altura da linha: Ajusta o espaçamento entre "Ricardo" e "Ninomiya" se quebrar */
+    line-height: 1.1; 
+    
+    width: 100%;
+    text-align: center;
+    letter-spacing: -1px; /* Aproxima um pouco as letras */
+  }
+}
+
+/* Ajuste fino para celulares muito pequenos (ex: iPhone SE) */
+@media (max-width: 380px) {
+  .hero-text.hero-bottom-full h1 {
+    font-size: 2rem; /* Tamanho fixo e seguro para telas mínimas */
+  }
+}
 
   /* Ajuste do Texto Superior no Mobile */
   .hero-text.hero-top-right {
