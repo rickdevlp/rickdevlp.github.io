@@ -62,3 +62,5 @@ group by
 order by 1, 3
 ````
 **Resultado esperado:**
+
+<img src="../../graphs/graficopercmetas2.jpg" alt="Gráfico de Percentual de Metas">
