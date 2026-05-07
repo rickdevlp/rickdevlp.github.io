@@ -33,4 +33,4 @@ order by 1
 ````
 **Resultado esperado:**
 
-<img src="graphs/Grafico perc metas.jpg" alt="Gráfico de Percentual de Metas">
+<img src="graphs/Grafico%20perc%20metas.jpg" alt="Gráfico de Percentual de Metas">
