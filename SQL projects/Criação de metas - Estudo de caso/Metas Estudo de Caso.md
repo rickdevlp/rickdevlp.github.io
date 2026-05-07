@@ -34,3 +34,31 @@ order by 1
 **Resultado esperado:**
 
 <img src="../../graphs/graficopercmetas.jpg" alt="Gráfico de Percentual de Metas">
+
+
+### 2. Identificar a curva de sazonalidade para compreender quais são os meses com maior e menor movimento de faturamento por região
+
+````sql
+select
+    a.territoryid                                                       as territoryid,
+    b.name                                                              as regiao,
+    format(orderdate, 'yyyyMM')                                         as mes,
+    sum(subtotal)                                                       as totalvendas,
+    
+    -- cálculo da curva de sazonalidade:
+    -- divide o total do mês pelo total acumulado daquela região específica no ano
+    round(
+        sum(subtotal) / sum(sum(subtotal)) over(partition by a.territoryid), 
+    4)                                                                  as curva_sazonalidade
+
+from sales.salesorderheader a
+join sales.salesterritory b on a.territoryid = b.territoryid
+where
+    orderdate between datefromparts(year(getdate()) - 1, 1, 1) and datefromparts(year(getdate()) - 1, 12, 31)
+group by
+    a.territoryid,
+    b.name,
+    format(orderdate, 'yyyyMM')
+order by 1, 3
+````
+**Resultado esperado:**
