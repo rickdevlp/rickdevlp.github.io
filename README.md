@@ -4,7 +4,7 @@ Bem vindo(a) ao meu portfolio! Documentarei de forma resumida alguns dos meus pr
 
 
 ## 📚 Tabela de conteúdos 
-- [SQL](#sql)
+- [SQL/Power BI](#sql)
 
 ***
 
