@@ -35,11 +35,7 @@ order by 1
 
 <img src="../../graphs/graficopercmetas.jpg" alt="Gráfico de Percentual de Metas">
 
-
-
-
-
-### 2. Identificar a curva de sazonalidade para compreender quais são os meses com maior e menor movimento de faturamento por região
+###### 2. Identificar a curva de sazonalidade para compreender quais são os meses com maior e menor movimento de faturamento por região
 
 ````sql
 select
