@@ -14,6 +14,7 @@ https://learn.microsoft.com/pt-br/sql/samples/adventureworks-install-configure?v
 ;with faturamento as (
     select
         sum(subtotal)                                                   as Faturamento
+
     from sales.salesorderheader
     where
         orderdate between datefromparts(year(getdate()) - 1, 1, 1) and datefromparts(year(getdate()) - 1, 12, 31)
@@ -23,13 +24,12 @@ select
     b.name                                                              as Regiao,
     sum(subtotal)                                                       as TotalVendas,
     round(sum(subtotal) / (select faturamento from faturamento), 2)     as PercentualVendas
+
 from sales.salesorderheader a
 join sales.salesterritory b on a.territoryid = b.territoryid
 where
     orderdate between datefromparts(year(getdate()) - 1, 1, 1) and datefromparts(year(getdate()) - 1, 12, 31)
-group by
-    a.territoryid,
-    b.name
+group by a.territoryid, b.name
 order by 1
 ````
 **Resultado esperado:**
@@ -46,9 +46,6 @@ select
     b.name                                                              as regiao,
     format(orderdate, 'yyyyMM')                                         as mes,
     sum(subtotal)                                                       as totalvendas,
-    
-    -- cálculo da curva de sazonalidade:
-    -- divide o total do mês pelo total acumulado daquela região específica no ano
     round(
         sum(subtotal) / sum(sum(subtotal)) over(partition by a.territoryid), 
     4)                                                                  as curva_sazonalidade
@@ -57,10 +54,7 @@ from sales.salesorderheader a
 join sales.salesterritory b on a.territoryid = b.territoryid
 where
     orderdate between datefromparts(year(getdate()) - 1, 1, 1) and datefromparts(year(getdate()) - 1, 12, 31)
-group by
-    a.territoryid,
-    b.name,
-    format(orderdate, 'yyyyMM')
+group by a.territoryid, b.name, format(orderdate, 'yyyyMM')
 order by 1, 3
 ````
 **Resultado esperado:**
@@ -79,6 +73,7 @@ order by 1, 3
         isnull(b.name, 'Total Geral')                                    as regiao,
         year(a.orderdate)                                                as ano,
         sum(a.subtotal)                                                  as faturamento_atual
+
     from sales.salesorderheader a
     join sales.salesterritory b on a.territoryid = b.territoryid
     where 
@@ -94,6 +89,7 @@ comparativo_yoy as (
         ano,
         faturamento_atual,
         lag(faturamento_atual) over (partition by regiao order by ano)   as faturamento_anterior
+
     from vendas_anuais
 )
 select
@@ -104,6 +100,7 @@ select
     round(
         ((faturamento_atual - faturamento_anterior) / nullif(faturamento_anterior, 0)) * 100, 
     2)                                                                   as perc_crescimento_yoy
+
 from comparativo_yoy
 where ano is not null
 order by total,regiao, ano desc;
