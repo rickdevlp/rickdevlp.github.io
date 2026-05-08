@@ -65,7 +65,8 @@ order by 1, 3
 
 <img src="../../graphs/graficopercmetas2.jpg" alt="Gráfico de Percentual de Metas 2">
 
-### 3. Realizar um estudo para compreender o percentual de crescimento/decrescimento dos últimos 5 anos
+
+### 3. Realizar um estudo para compreender o percentual de crescimento/decrescimento dos últimos 5 anos YoY (Year over Year)
 
 ````sql
 ;with vendas_anuais as (
@@ -106,7 +107,7 @@ order by total,regiao, ano desc;
 ````
 **Resultado esperado:**
 
-| regiao | ano | faturamento_atual | faturamento_anterior | perc_crescimento_yoy D
+| regiao | ano | faturamento_atual | faturamento_anterior | perc_crescimento_yoy
 |---|---|---|---|---|
 | Australia | 2025 | R$ 2.751.945,92 | R$ 4.246.450,55 | -35,19 |
 | Australia | 2024 | R$ 4.246.450,55 | R$ 2.114.048,37 | 100,86 |
