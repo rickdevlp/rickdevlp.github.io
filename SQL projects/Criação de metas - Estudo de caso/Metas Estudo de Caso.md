@@ -179,8 +179,9 @@ Abaixo, apresento o desempenho global de vendas. O destaque fica para o crescime
 # 🎯 Planejamento Estratégico 2026
 
 ### 📊 Média Anual Consolidada (Baseline)
-## **R$ 27.461.595,35**  
-> *Valor médio calculado com base no histórico de faturamento consolidado (2022-2025).*
+ **R$ 27.461.595,35**  
+ *Valor médio calculado com base no histórico de faturamento consolidado (2022-2025).*
+ >
 
 ---
 
