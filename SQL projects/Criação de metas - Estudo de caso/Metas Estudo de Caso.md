@@ -148,9 +148,9 @@ order by total,regiao, ano desc;
 | United Kingdom | 2025 | R$ 2.084.356,96 | R$ 3.641.619,72 | -42,76 |
 | United Kingdom | 2024 | R$ 3.641.619,72 | R$ 1.578.277,47 | 130,73 |
 | United Kingdom | 2023 | R$ 1.578.277,47 | R$ 366.466,89 | 330,67 |
-|  | 
 | United Kingdom | 2022 | R$ 366.466,89 | NULL | NULL |
 | Total Geral | 2025 | R$ 20.008.518,36 | R$ 43.671.889,50 | -54,18 |
 | Total Geral | 2024 | R$ 43.671.889,50 | R$ 31.604.921,95 | 38,18 |
 | Total Geral | 2023 | R$ 31.604.921,95 | R$ 14.561.051,59 | 117,05 |
 | Total Geral | 2022 | R$ 14.561.051,59 | NULL | NULL |
+|  | 
