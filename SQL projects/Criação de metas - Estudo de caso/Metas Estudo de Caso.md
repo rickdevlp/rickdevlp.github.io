@@ -112,10 +112,10 @@ Abaixo, apresentamos o desempenho global de vendas. O destaque fica para o cresc
 
 | Métrica Geral | Ano | Faturamento | YoY (%) |
 | :--- | :---: | :--- | :---: |
-| 🏆 **Total Geral** | **2025** | **R$ 20.008.518,36** | `▼ -54,18%` |
-| 🏆 **Total Geral** | **2024** | **R$ 43.671.889,50** | `▲ +38,18%` |
-| 🏆 **Total Geral** | **2023** | **R$ 31.604.921,95** | `▲ +117,05%` |
-| 🏆 **Total Geral** | **2022** | **R$ 14.561.051,59** | `-` |
+| 🔴 **Total Geral** | **2025** | **R$ 20.008.518,36** | `▼ -54,18%` |
+| 🟢 **Total Geral** | **2024** | **R$ 43.671.889,50** | `▲ +38,18%` |
+| 🟢 **Total Geral** | **2023** | **R$ 31.604.921,95** | `▲ +117,05%` |
+| ⚪ **Total Geral** | **2022** | **R$ 14.561.051,59** | `-` |
 
 <br>
 
