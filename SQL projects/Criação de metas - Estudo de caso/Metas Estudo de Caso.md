@@ -108,7 +108,6 @@ from comparativo_yoy
 where ano is not null
 order by total,regiao, ano desc;
 ````
-<br>
 
 **Resultado esperado:**
 
