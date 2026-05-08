@@ -188,9 +188,6 @@ Abaixo, apresento o desempenho global de vendas. O destaque fica para o crescime
 
 ### 🧮 Memória de Cálculo: Recuperação da Média
 Para retornar ao patamar médio de operação e mitigar a retração observada no último período, calculamos a variação percentual necessária:
-<br>
-
-$$Variação \% = \frac{\text{Valor Final} - \text{Valor Inicial}}{\text{Valor Inicial}} \times 100$$
 
 <br>
 
