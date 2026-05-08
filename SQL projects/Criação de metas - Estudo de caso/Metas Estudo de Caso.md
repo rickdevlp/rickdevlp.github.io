@@ -175,7 +175,7 @@ Abaixo, apresento o desempenho global de vendas. O destaque fica para o crescime
 
 </details>
 
-
+<br>
 # 🎯 Planejamento Estratégico 2026
 
 ### 📊 Média Anual Consolidada (Baseline)
