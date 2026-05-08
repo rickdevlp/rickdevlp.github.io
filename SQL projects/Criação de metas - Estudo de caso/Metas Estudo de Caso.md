@@ -110,11 +110,21 @@ order by total,regiao, ano desc;
 📈 Análise de Faturamento Consolidado e YoY
 Abaixo, apresentamos o desempenho global de vendas. O destaque fica para o crescimento sólido de 38,18% em 2024, seguido por um ajuste no volume de transações em 2025.
 
-regiao,ano,faturamento_atual,faturamento_anterior,perc_crescimento_yoy
-Total Geral,2025,"R$ 20.008.518,36","R$ 43.671.889,50","-54,18"
-Total Geral,2024,"R$ 43.671.889,50","R$ 31.604.921,95","38,18"
-Total Geral,2023,"R$ 31.604.921,95","R$ 14.561.051,59","117,05"
-Total Geral,2022,"R$ 14.561.051,59",NULL,NULL
+| Métrica Geral | Ano | Faturamento | YoY (%) |
+| :--- | :---: | :--- | :---: |
+| 🏆 **Total Geral** | **2025** | **R$ 20.008.518,36** | `▼ -54,18%` |
+| 🏆 **Total Geral** | **2024** | **R$ 43.671.889,50** | `▲ +38,18%` |
+| 🏆 **Total Geral** | **2023** | **R$ 31.604.921,95** | `▲ +117,05%` |
+| 🏆 **Total Geral** | **2022** | **R$ 14.561.051,59** | `-` |
+
+<br>
+
+<details>
+  <summary>📂 Clique aqui para ver o detalhamento por Região</summary>
+
+  <!-- Aqui entra aquela tabela grande que formatamos antes -->
+
+</details>
 <br>
 
 **Resultado esperado:**
