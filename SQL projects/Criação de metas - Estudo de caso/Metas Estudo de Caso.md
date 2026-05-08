@@ -8,6 +8,7 @@ https://learn.microsoft.com/pt-br/sql/samples/adventureworks-install-configure?v
 ## 📌 Solução
 
 ### 1. Identificar o percentual de faturamento em que cada região representou no ano anterior
+<br>
 
 ````sql
 ;with faturamento as (
@@ -34,9 +35,10 @@ order by 1
 **Resultado esperado:**
 
 <img src="../../graphs/graficopercmetas.jpg" alt="Gráfico de Percentual de Metas">
-
+<br>
 
 ### 2. Identificar a curva de sazonalidade para compreender quais são os meses com maior e menor movimento de faturamento por região
+<br>
 
 ````sql
 select
@@ -64,9 +66,10 @@ order by 1, 3
 **Resultado esperado:**
 
 <img src="../../graphs/graficopercmetas2.jpg" alt="Gráfico de Percentual de Metas 2">
-
+<br>
 
 ### 3. Realizar um estudo para compreender o percentual de crescimento/decrescimento dos últimos 5 anos YoY (Year over Year)
+<br>
 
 ````sql
 ;with vendas_anuais as (
@@ -105,6 +108,8 @@ from comparativo_yoy
 where ano is not null
 order by total,regiao, ano desc;
 ````
+<br>
+
 **Resultado esperado:**
 
 | regiao | ano | faturamento_atual | faturamento_anterior | perc_crescimento_yoy
