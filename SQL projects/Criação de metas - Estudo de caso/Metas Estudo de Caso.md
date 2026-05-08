@@ -108,7 +108,8 @@ order by total,regiao, ano desc;
 <br>
 
 📈 Análise de Faturamento Consolidado e YoY
-Abaixo, apresentamos o desempenho global de vendas. O destaque fica para o crescimento sólido de 38,18% em 2024, seguido por um ajuste no volume de transações em 2025.
+<br>
+Abaixo, apresento o desempenho global de vendas. O destaque fica para o crescimento sólido de 38,18% em 2024, seguido por um ajuste no volume de transações em 2025.
 
 | Métrica Geral | Ano | Faturamento | YoY (%) |
 | :--- | :---: | :--- | :---: |
@@ -174,3 +175,23 @@ Abaixo, apresentamos o desempenho global de vendas. O destaque fica para o cresc
 
 </details>
 
+
+📊 Média Anual Consolidada
+
+Com base nos dados coletados acima, cheguei na conclusão de que R$ 27.461.595,35 é o valor médio desde 2022.
+
+$$\frac{\text{Valor Final} - \text{Valor Inicial}}{\text{Valor Inicial}} \times 100$$
+
+Diferença bruta: R$27.461.595,35 - R$20.008.518,36 = R$7.453.076,99$
+Divisão pelo inicial: R$7.453.076,99 / R$20.008.518,36 \approx 0,372495...$
+Resultado: 37,25%
+
+Para a projeção de 2026, foi adotada uma meta de crescimento de 40%. Esta métrica foi definida cruzando a Média Móvel de Crescimento (37,25%) com um incremento estratégico de eficiência operacional. O objetivo é recuperar o patamar de faturamento acima da média consolidada de R$ 27,4M, aproximando a operação dos níveis recordes observados em 2024.
+
+Cenário Base (Média de 37,25%):
+
+Faturamento 2025 (R$ 20.008.518,36) * 1,3725 = R$ 27.461.595,35
+
+Cenário Alvo (Meta de 40%):
+
+Faturamento 2025 (R$ 20.008.518,36) * 1,40 = R$ 28.011.925,704
