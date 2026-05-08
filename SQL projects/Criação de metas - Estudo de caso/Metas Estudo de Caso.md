@@ -176,22 +176,34 @@ Abaixo, apresento o desempenho global de vendas. O destaque fica para o crescime
 </details>
 
 
-📊 Média Anual Consolidada
+# 🎯 Planejamento Estratégico 2026
 
-Com base nos dados coletados acima, cheguei na conclusão de que R$ 27.461.595,35 é o valor médio desde 2022.
+### 📊 Média Anual Consolidada (Baseline)
+> **R$ 27.461.595,35**  
+> *Valor médio calculado com base no histórico de faturamento consolidado (2022-2025).*
 
-$$\frac{\text{Valor Final} - \text{Valor Inicial}}{\text{Valor Inicial}} \times 100$$
+---
 
-Diferença bruta: R$27.461.595,35 - R$20.008.518,36 = R$7.453.076,99$
-Divisão pelo inicial: R$7.453.076,99 / R$20.008.518,36 \approx 0,372495...$
-Resultado: 37,25%
+### 🧮 Memória de Cálculo: Recuperação da Média
+Para retornar ao patamar médio de operação e mitigar a retração observada no último período, calculamos a variação percentual necessária:
 
-Para a projeção de 2026, foi adotada uma meta de crescimento de 40%. Esta métrica foi definida cruzando a Média Móvel de Crescimento (37,25%) com um incremento estratégico de eficiência operacional. O objetivo é recuperar o patamar de faturamento acima da média consolidada de R$ 27,4M, aproximando a operação dos níveis recordes observados em 2024.
+$$Variação \% = \frac{\text{Valor Final} - \text{Valor Inicial}}{\text{Valor Inicial}} \times 100$$
 
-Cenário Base (Média de 37,25%):
+*   **Diferença bruta:** `R$ 27.461.595,35` - `R$ 20.008.518,36` = **`R$ 7.453.076,99`**
+*   **Cálculo de Recuperação:** `R$ 7.453.076,99` / `R$ 20.008.518,36` ≈ **`37,25%`**
+*   **Status:** Ponto de equilíbrio para retomada da média histórica.
 
-Faturamento 2025 (R$ 20.008.518,36) * 1,3725 = R$ 27.461.595,35
+---
 
-Cenário Alvo (Meta de 40%):
+### 🚀 Definição da Meta para 2026
+Para o ciclo de 2026, foi estabelecida uma meta de crescimento de **40%**. 
 
-Faturamento 2025 (R$ 20.008.518,36) * 1,40 = R$ 28.011.925,704
+Esta métrica foi definida através do cruzamento da **Média de Recuperação (37,25%)** com um incremento de **2,75% em eficiência operacional**. O objetivo estratégico é superar a média histórica e reestabelecer a trajetória de crescimento observada nos anos anteriores.
+
+#### 📉 Projeção de Cenários
+| Cenário | % Crescimento | Faturamento Projetado | Objetivo Estratégico |
+| :--- | :---: | :--- | :--- |
+| **Base (Média)** | `37,25%` | `R$ 27.461.595,35` | Estabilização e Retomada |
+| **Alvo (Estratégico)** | **`40,00%`** | **`R$ 28.011.925,70`** | **Expansão e Performance** |
+
+---
