@@ -105,11 +105,25 @@ from comparativo_yoy
 where ano is not null
 order by total,regiao, ano desc;
 ````
+<br>
+
+📈 Análise de Faturamento Consolidado e YoY
+Abaixo, apresentamos o desempenho global de vendas. O destaque fica para o crescimento sólido de 38,18% em 2024, seguido por um ajuste no volume de transações em 2025.
+
+regiao,ano,faturamento_atual,faturamento_anterior,perc_crescimento_yoy
+Total Geral,2025,"R$ 20.008.518,36","R$ 43.671.889,50","-54,18"
+Total Geral,2024,"R$ 43.671.889,50","R$ 31.604.921,95","38,18"
+Total Geral,2023,"R$ 31.604.921,95","R$ 14.561.051,59","117,05"
+Total Geral,2022,"R$ 14.561.051,59",NULL,NULL
+<br>
 
 **Resultado esperado:**
 
-| regiao | ano | faturamento_atual | faturamento_anterior | perc_crescimento_yoy
-|---|---|---|---|---|
+<details>
+  <summary>📊 Clique aqui para expandir a Tabela de Crescimento YoY por Região</summary>
+
+| regiao | ano | faturamento_atual | faturamento_anterior | perc_crescimento_yoy |
+|:--- |:---:|:--- |:--- |:---:|
 | Australia | 2025 | R$ 2.751.945,92 | R$ 4.246.450,55 | -35,19 |
 | Australia | 2024 | R$ 4.246.450,55 | R$ 2.114.048,37 | 100,86 |
 | Australia | 2023 | R$ 2.114.048,37 | R$ 1.542.891,12 | 37,01 |
@@ -155,3 +169,6 @@ order by total,regiao, ano desc;
 | Total Geral | 2023 | R$ 31.604.921,95 | R$ 14.561.051,59 | 117,05 |
 | Total Geral | 2022 | R$ 14.561.051,59 | NULL | NULL |
 |  | 
+
+</details>
+
