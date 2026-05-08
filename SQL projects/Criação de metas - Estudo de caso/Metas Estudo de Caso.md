@@ -119,18 +119,10 @@ Abaixo, apresentamos o desempenho global de vendas. O destaque fica para o cresc
 
 <br>
 
-<details>
-  <summary>📂 Clique aqui para ver o detalhamento por Região</summary>
-
-  <!-- Aqui entra aquela tabela grande que formatamos antes -->
-
-</details>
-<br>
-
 **Resultado esperado:**
 
 <details>
-  <summary>📊 Clique aqui para expandir a Tabela de Crescimento YoY por Região</summary>
+  <summary>📂 Clique aqui para expandir a Tabela de Crescimento YoY por Região</summary>
 
 | regiao | ano | faturamento_atual | faturamento_anterior | perc_crescimento_yoy |
 |:--- |:---:|:--- |:--- |:---:|
