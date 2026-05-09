@@ -210,3 +210,33 @@ Esta métrica foi definida através do cruzamento da **Média de Recuperação (
 | **Alvo (Estratégico)** | **`40,00%`** | **`R$ 28.011.925,70`** | **Expansão e Performance** |
 
 ---
+<br>
+
+### 4. Após levantar todas as informações necessárias, conseguimos distribuir as metas em cada mês de acordo com a sua respectiva sazonalidade.
+<br>
+
+````sql
+;with sazonalidade as (
+    select
+        a.territoryid                                                    as territoryid,
+        b.name                                                           as regiao,
+        format(orderdate, 'yyyyMM')                                      as mes,
+        sum(subtotal)                                                    as totalvendas_ant,
+        sum(sum(subtotal)) over(partition by a.territoryid)              as total_anual_regiao,
+        cast(sum(subtotal) as float) / cast(sum(sum(subtotal)) over(partition by a.territoryid) as float) as curva_sazonalidade
+    from sales.salesorderheader a
+    join sales.salesterritory b on a.territoryid = b.territoryid
+    where
+        orderdate between datefromparts(year(getdate()) - 1, 1, 1) and datefromparts(year(getdate()) - 1, 12, 31)
+    group by a.territoryid, b.name, format(orderdate, 'yyyyMM'))
+select     
+    territoryid,
+    regiao,
+    cast(mes as int) + 100                                                as mes,
+    format(totalvendas_ant, 'c', 'pt-br')                                 as totalvendas_ant,
+    format(totalvendas_ant * 1.4, 'c', 'pt-br')                           as meta,
+    format(curva_sazonalidade, 'p2', 'pt-br')                             as peso_sazonalidade_perc,
+    format((curva_sazonalidade * 0.4 * total_anual_regiao), 'c', 'pt-br') as valor_ajustado_crescimento
+from sazonalidade;
+````
+<br>
