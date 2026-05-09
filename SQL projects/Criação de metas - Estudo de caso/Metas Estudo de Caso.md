@@ -243,6 +243,23 @@ from sazonalidade;
 
 **Resultado esperado:**
 
+### 📈 Resumo Executivo: Metas 2026 por Região
+
+| Região | Faturamento Base (2025) | Meta Consolidada (2026) | Crescimento Previsto (R$) | Representatividade (%) |
+|:---|---:|---:|---:|---:|
+| **Southwest** | R$ 3.966.506,68 | R$ 5.553.109,34 | R$ 1.586.602,67 | 19,82% |
+| **Northwest** | R$ 2.994.492,87 | R$ 4.192.290,03 | R$ 1.197.797,15 | 14,97% |
+| **Australia** | R$ 2.751.945,91 | R$ 3.852.724,28 | R$ 1.100.778,36 | 13,75% |
+| **Canada** | R$ 2.389.120,61 | R$ 3.344.768,83 | R$ 955.648,24 | 11,94% |
+| **United Kingdom** | R$ 2.084.356,97 | R$ 2.918.099,74 | R$ 833.742,77 | 10,42% |
+| **France** | R$ 1.664.041,62 | R$ 2.329.658,26 | R$ 665.616,64 | 8,32% |
+| **Germany** | R$ 1.548.206,97 | R$ 2.167.489,75 | R$ 619.282,78 | 7,74% |
+| **Central** | R$ 955.864,73 | R$ 1.338.210,63 | R$ 382.345,90 | 4,78% |
+| **Southeast** | R$ 875.604,20 | R$ 1.225.845,90 | R$ 350.241,68 | 4,38% |
+| **Northeast** | R$ 778.377,79 | R$ 1.089.728,92 | R$ 311.351,12 | 3,89% |
+| **TOTAL GERAL** | **R$ 20.008.518,35** | **R$ 28.011.925,68** | **R$ 8.003.407,31** | **100,00%** |
+
+
 <details>
   <summary>📂 Clique aqui para expandir a tabela com as metas distribuidas por região</summary>
     
@@ -306,3 +323,8 @@ from sazonalidade;
 | 10 | United Kingdom | 202604 | R$ 636.594,11 | R$ 891.231,75 | 30,54% | R$ 254.637,64 |
 | 10 | United Kingdom | 202605 | R$ 257.171,96 | R$ 360.040,74 | 12,34% | R$ 102.868,78 |
 | 10 | United Kingdom | 202606 | R$ 4.006,11 | R$ 5.608,55 | 0,19% | R$ 1.602,44 |
+|    |
+
+Nota Metodológica:
+Os valores de 2026 foram projetados aplicando um markup de crescimento de 40% sobre o faturamento realizado no primeiro semestre de 2025. A distribuição mensal respeita a curva de sazonalidade histórica de cada território, garantindo que o esforço de vendas esteja alinhado com o comportamento de compra regional.
+
