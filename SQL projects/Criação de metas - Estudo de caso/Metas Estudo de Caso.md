@@ -333,7 +333,6 @@ Os valores de 2026 foram projetados aplicando um markup de crescimento de 40% so
 <br>
 
 ## ✨ EXTRA. Inserção de dados prévios de 2026
-<br>
 
 Nota: A versão do banco de dados que estou utilizando para esse estudo é o AdventureWorks2025, que possui dados apenas até 2025. Como a finalidade é mostrar como a meta se comporta em relação às vendas, criei uma
 simulação randomica dos dados de 2026 até a data atual. Como o objetivo desse estudo é didático, abaixo demonstro como realizei essa inserção. 
