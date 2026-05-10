@@ -328,3 +328,62 @@ from sazonalidade;
 Nota Metodológica:
 Os valores de 2026 foram projetados aplicando um markup de crescimento de 40% sobre o faturamento realizado no primeiro semestre de 2025. A distribuição mensal respeita a curva de sazonalidade histórica de cada território, garantindo que o esforço de vendas esteja alinhado com o comportamento de compra regional.
 
+<br>
+
+### EXTRA. Inserção de dados prévios de 2026
+<br>
+
+Nota: A versão do banco de dados que estou utilizando para esse estudo é o AdventureWorks2025, que possui dados apenas até 2025. Como a finalidade é mostrar como a meta se comporta em relação às vendas, criei uma
+simulação randomica dos dados de 2026 até a data atual. Como o objetivo desse estudo é didático, abaixo demonstro como realizei essa inserção. 
+
+⚠️ Importante!! Para a inserção dos dados é importante sempre utilizar transac para validar se o que será inserido está correto então, caso queira realizar essa mesma inserção, descomente a linha do commit e comente
+a linha do rollback apenas quando tiver a certeza de que os dados satisfazem a sua necessidade.
+<br>
+
+````sql
+begin tran;
+
+insert into sales.salesorderheader (
+    revisionnumber, orderdate, duedate, shipdate, status, onlineorderflag,
+    purchaseordernumber, accountnumber, customerid, salespersonid, territoryid,
+    billtoaddressid, shiptoaddressid, shipmethodid, creditcardid, creditcardapprovalcode,
+    currencyrateid, subtotal, taxamt, freight, comment, rowguid, modifieddate
+)
+select 
+    revisionnumber,
+    dateadd(year, 1, orderdate) as orderdate, 
+    dateadd(year, 1, duedate) as duedate,
+    dateadd(year, 1, shipdate) as shipdate,
+    status,
+    onlineorderflag,
+    purchaseordernumber,
+    accountnumber,
+    customerid,
+    salespersonid,
+    territoryid,
+    billtoaddressid,
+    shiptoaddressid,
+    shipmethodid,
+    creditcardid,
+    creditcardapprovalcode,
+    currencyrateid,
+    subtotal * (0.7 + (rand(checksum(newid())) * 0.6)) as subtotal,
+    taxamt * (0.7 + (rand(checksum(newid())) * 0.6)) as taxamt,
+    freight * (0.7 + (rand(checksum(newid())) * 0.6)) as freight,
+    'Simulação Vendas 2026' as comment,
+    newid() as rowguid,
+    getdate() as modifieddate
+from sales.salesorderheader
+where 
+    orderdate >= '2025-01-01' 
+    and orderdate <= dateadd(year, -1, getdate());
+
+
+select top 100 *
+from sales.salesorderheader
+where orderdate >= '2026-01-01';
+
+--commit tran; 
+rollback tran;
+````
+<br>
