@@ -324,7 +324,8 @@ from sazonalidade;
 | 10 | United Kingdom | 202605 | R$ 257.171,96 | R$ 360.040,74 | 12,34% | R$ 102.868,78 |
 | 10 | United Kingdom | 202606 | R$ 4.006,11 | R$ 5.608,55 | 0,19% | R$ 1.602,44 |
 |    |
-
+</details>
+    
 Nota Metodológica:
 Os valores de 2026 foram projetados aplicando um markup de crescimento de 40% sobre o faturamento realizado no primeiro semestre de 2025. A distribuição mensal respeita a curva de sazonalidade histórica de cada território, garantindo que o esforço de vendas esteja alinhado com o comportamento de compra regional.
 
