@@ -107,7 +107,7 @@ order by total,regiao, ano desc;
 ````
 <br>
 
-📈 Análise de Faturamento Consolidado e YoY
+### 📈 Análise de Faturamento Consolidado e YoY
 <br>
 Abaixo, apresento o desempenho global de vendas. O destaque fica para o crescimento sólido de 38,18% em 2024, seguido por um ajuste no volume de transações em 2025.
 
@@ -327,18 +327,19 @@ from sazonalidade;
 </details>
 <br>
 
-Nota Metodológica:
+### 📌 Nota Metodológica:
 Os valores de 2026 foram projetados aplicando um markup de crescimento de 40% sobre o faturamento realizado no primeiro semestre de 2025. A distribuição mensal respeita a curva de sazonalidade histórica de cada território, garantindo que o esforço de vendas esteja alinhado com o comportamento de compra regional.
 
 <br>
 
-### EXTRA. Inserção de dados prévios de 2026
+## ✨ EXTRA. Inserção de dados prévios de 2026
 <br>
 
 Nota: A versão do banco de dados que estou utilizando para esse estudo é o AdventureWorks2025, que possui dados apenas até 2025. Como a finalidade é mostrar como a meta se comporta em relação às vendas, criei uma
 simulação randomica dos dados de 2026 até a data atual. Como o objetivo desse estudo é didático, abaixo demonstro como realizei essa inserção. 
 
-⚠️ Importante!! Para a inserção dos dados é importante sempre utilizar transac para validar se o que será inserido está correto então, caso queira realizar essa mesma inserção, descomente a linha do commit e comente
+##  ⚠️ Importante!! 
+Para a inserção dos dados é importante sempre utilizar transac para validar se o que será inserido está correto então, caso queira realizar essa mesma inserção, descomente a linha do commit e comente
 a linha do rollback apenas quando tiver a certeza de que os dados satisfazem a sua necessidade.
 <br>
 
