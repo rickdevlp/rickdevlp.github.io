@@ -3,7 +3,7 @@
 Bem vindo(a) ao meu portfolio! Documentarei de forma resumida alguns dos meus projetos e experiencias principalmente na área de dados/Business Intelligence. 
 
 
-## 📚 Tabela de conteúdos 
+## 🗺️ Tabela de conteúdos 
 - [SQL/Power BI](#sql)
 
 ***
