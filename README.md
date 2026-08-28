@@ -10,7 +10,7 @@ Bem vindo(a) ao meu portfolio! Documentarei de forma resumida alguns dos meus pr
 
 # SQL/Power BI
 
-| Link do Projeto | Área de Análise | Descrição do Projeto | 
+| Link do Projeto | Área de Análise | Descrição | 
 |---|---|---|
 |💡 [Criação de Metas de Faturamento ](https://github.com/rickdevlp/rickdevlp.github.io/blob/main/SQL%20projects/Cria%C3%A7%C3%A3o%20de%20metas%20-%20Estudo%20de%20caso/Metas%20Estudo%20de%20Caso.md) | Analise de dados | Descrição passo a passo do código à modelagem de um Dashboard em Power BI sobre a distribuição de metas para crescimento de faturamento | 
 
@@ -18,7 +18,7 @@ Bem vindo(a) ao meu portfolio! Documentarei de forma resumida alguns dos meus pr
 
 ## 📚 Manuais Técnicos & SQL Avançado
 
-| Repositório / Guia | Foco Técnico | Descrição |
+| Repositório / Guia | Área de Análise | Descrição |
 | :--- | :--- | :--- |
 | 🧠 [Advanced T-SQL Handbook](https://github.com/rickdevlp/advanced-tsql-handbook) | T-SQL Avançado & Performance | Guia prático com padrões avançados: SQL Dinâmico, MERGE/Upsert, Controle Transacional (`TRY...CATCH`), Cursores vs. Set-Based e CTEs |
 
