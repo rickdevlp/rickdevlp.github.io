@@ -1,5 +1,26 @@
+# ⚡ SQL Dinâmico com Nomes de Tabelas Dinâmicos (`sp_executesql`)
 
+## 📌 Contexto e Aplicação Prática
+Em cenários de Engenharia de Dados e Data Warehousing, é comum encontrar bancos com **tabelas particionadas fisicamente por período** (ex.: `FatoVendas_202608`, `FatoVendas_202609`). 
 
+Como o SQL Server não permite passar nomes de tabelas ou colunas diretamente como parâmetros em comandos estáticos, precisamos utilizar o **SQL Dinâmico** para construir a instrução como texto e executá-la através da procedure nativa `sp_executesql`.
+
+---
+
+## 🎯 Cenário de Negócio (AdventureWorks)
+Neste exemplo, simulamos a leitura de uma tabela mensal de vendas do período `202608` (`dbo.FatoVendas_202608`). 
+
+1. Recebemos o sufixo do período desejado via variável (`@Anomes = '202608'`).
+2. Montamos o nome da tabela concatenando o prefixo com a variável (`dbo.FatoVendas_` + `@Anomes`).
+3. Aplicamos **validação de segurança** usando `QUOTENAME()` e a função `OBJECT_ID()` para garantir que a tabela existe antes de executar o script.
+4. Executamos a consulta dinâmica retornando a volumetria e métricas agregadas.
+
+---
+
+## ⚠️ Boas Práticas e Segurança (SQL Injection)
+* **Nunca concatene parâmetros de filtro na string sem usar `sp_executesql`:** Nomes de tabelas não aceitam parametrização via `@param`, mas filtros da cláusula `WHERE` devem sempre ser passados no parâmetro de definição da procedure.
+* **Uso do `QUOTENAME()`:** Sempre envolva variáveis de objetos de banco (tabelas, esquemas, colunas) com a função `QUOTENAME()` para prevenir ataques de **SQL Injection** e tratar caracteres especiais.
+* **Validação de Existência:** Verifique a existência do objeto com `OBJECT_ID()` antes da execução para evitar falhas de runtime no pipeline.
 
 
 Você pode encontrar esse banco de dados através do link:
