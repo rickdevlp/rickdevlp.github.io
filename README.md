@@ -20,7 +20,7 @@ Bem vindo(a) ao meu portfolio! Documentarei de forma resumida alguns dos meus pr
 
 | Repositório / Guia | Área de Análise | Descrição |
 | :--- | :--- | :--- |
-| 🧠 [Advanced T-SQL Handbook](https://github.com/rickdevlp/advanced-tsql-handbook) | T-SQL Avançado & Performance | Guia prático com padrões avançados: SQL Dinâmico, MERGE/Upsert, Controle Transacional (`TRY...CATCH`), Cursores vs. Set-Based e CTEs |
+| 🧠 [Advanced T-SQL Handbook](https://github.com/rickdevlp/rickdevlp.github.io/tree/f2eeea947596fb18a96bce4fdea6295e88ba516e/Advanced%20T-SQL%20Handbook) | T-SQL Avançado & Performance | Guia prático com padrões avançados: SQL Dinâmico, MERGE/Upsert, Controle Transacional (`TRY...CATCH`), Cursores vs. Set-Based e CTEs |
 
 ---
 ***
