@@ -26,7 +26,7 @@ O repositório é organizado em diretórios práticos contendo explicações te�
 | Módulo | Tópico Técnico | Descrição & Conceitos Chave |
 | :---: | :--- | :--- |
 | **01** | **[UPSERT com MERGE & Log de Auditoria](https://github.com/rickdevlp/rickdevlp.github.io/blob/f2eeea947596fb18a96bce4fdea6295e88ba516e/Advanced%20T-SQL%20Handbook/01%20-%20Upsert%20com%20Merge%20na%20pratica.md)** | Sincronização atômica de dados utilizando a cláusula `OUTPUT $action` para auditoria de `INSERT` e `UPDATE`. |
-| **02** | **SQL Dinâmico & Segurança** | Execução de consultas dinâmicas com `sp_executesql`, prevenção de **SQL Injection** e parametrização. |
+| **02** | **[SQL Dinâmico & Segurança](https://github.com/rickdevlp/rickdevlp.github.io/blob/956aa6ed05ccbcd9556b12e822cde4a489551150/Advanced%20T-SQL%20Handbook/02%20-%20SQL%20Dinamico.md)** | Execução de consultas dinâmicas com `sp_executesql`, prevenção de **SQL Injection** e parametrização. |
 | **03** | **Tratamento de Erros & Transações** | Uso robusto de `TRY...CATCH`, controle de `TRANSACTION` e verificação de `XACT_STATE()` para rollbacks seguros. |
 | **04** | **Cursores vs. Set-Based Operations** | Análise de performance comparando processamento linha a linha (*Cursors*) contra operações em conjunto e *Window Functions*. |
 | **05** | **CTEs Recursivas & Hierarquias** | Consultas em estruturas hierárquicas e árvores de decisão utilizando Common Table Expressions. |
