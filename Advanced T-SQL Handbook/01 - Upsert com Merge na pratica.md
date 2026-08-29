@@ -1,5 +1,5 @@
 # 🔄 Operações de UPSERT com MERGE e Auditoria de Log 
-(OUTPUT $action)
+## (OUTPUT $action)
 
 Este documento tem por objetivo demonstrar uma situação real de utilização do Upsert com Merge. No contexto corporativo, eu costumo utilizar essas clausulas para gerar logs de acompanhamento que me indicarão se as tabelas que eu preciso foram atualizadas ou não.
   Com isso, eu consigo automatizar os meus processos de forma que, se houver um insert no meu log, significa que novos periodos foram atualizados e, caso seja feito apenas um update, é porque as tabelas não foram atualizadas ainda e apenas a data do processamento foi atualizada.
