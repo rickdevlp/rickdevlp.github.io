@@ -29,7 +29,7 @@ O repositório é organizado em diretórios práticos contendo explicações te�
 | **02** | **[SQL Dinâmico & Segurança](https://github.com/rickdevlp/rickdevlp.github.io/blob/956aa6ed05ccbcd9556b12e822cde4a489551150/Advanced%20T-SQL%20Handbook/02%20-%20SQL%20Dinamico.md)** | Execução de consultas dinâmicas com `sp_executesql`, prevenção de **SQL Injection** e parametrização. |
 | **03** | **[Tratamento de Erros (Try Catch) & Transações](https://github.com/rickdevlp/rickdevlp.github.io/blob/e4c8f5b62e200d14074e711db44e4067da9244d4/Advanced%20T-SQL%20Handbook/03%20-%20Try%20Catch%20e%20Transac.md)** | Uso robusto de `TRY...CATCH`, controle de `TRANSACTION` e verificação de `XACT_STATE()` para rollbacks seguros. |
 | **04** | **[Cursores vs. Set-Based Operations](https://github.com/rickdevlp/rickdevlp.github.io/blob/9cbe5fc6ec9c6a3d3ed1a65aea8c0d18a81000ef/Advanced%20T-SQL%20Handbook/04%20-%20Cursores%20vs%20Set%20Based.md)** | Análise de performance comparando processamento linha a linha (*Cursors*) contra operações em conjunto e *Window Functions*. |
-| **05** | **CTEs Recursivas & Hierarquias** | Consultas em estruturas hierárquicas e árvores de decisão utilizando Common Table Expressions. |
+| **05** | **[CTEs Recursivas & Hierarquias](https://github.com/rickdevlp/rickdevlp.github.io/blob/df71b36d1979b58d744983bd1c3ad8fca38dc16e/Advanced%20T-SQL%20Handbook/05%20-%20CTEs%20Recursivas.md)** | Consultas em estruturas hierárquicas e árvores de decisão utilizando Common Table Expressions. |
 
 ---
 
